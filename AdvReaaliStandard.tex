@@ -1,0 +1,1341 @@
+\documentclass[10pt]{article}
+\usepackage[pdftex, pdfborder={0 0 0}]{hyperref}
+\usepackage{polyglossia} % Eesti keele tugi
+\setdefaultlanguage{estonian}
+\usepackage{csquotes}% Eesti jutumärgid \enquote{}
+\usepackage{enumitem}% Listid
+\setlist[itemize]{topsep=0em, partopsep=0em, parsep=0em, itemsep=0em, leftmargin=*}% Itemize spacing
+\setlist[enumerate]{topsep=0em, partopsep=0em, parsep=0em, itemsep=0em, leftmargin=*}% Itemize spacing
+\usepackage[compact]{titlesec}% Kompaktsed pealkirjad
+\titleformat*{\subparagraph}{\textit}
+\usepackage[final]{microtype}
+\usepackage{geometry}% Paigutus
+\geometry{
+    paper=a4paper, % Paper size, change to letterpaper for US letter size
+    % top=0.5cm, % Top margin
+    % bottom=1cm, % Bottom margin
+    % left=0.5cm, % Left margin
+    % right=0.5cm, % Right margin
+    foot=0.5cm, % Footer-margin distance
+    margin = 1 cm,
+    % landscape,
+     % showframe, % Uncomment to show how the type block is set on the page
+}
+\setlength{\parindent}{0cm}% Taandridu pole
+\usepackage{multicol}
+\setlength{\columnseprule}{0.4pt}
+\usepackage[strict]{changepage}
+\usepackage{xcolor, soul}
+
+\renewcommand{\c}{$\clubsuit$}
+\renewcommand{\d}{$\diamondsuit$}
+\newcommand{\h}{$\heartsuit$}
+\newcommand{\s}{$\spadesuit$}
+
+\newcommand{\p}{\textsuperscript{+}}
+\newcommand{\m}{\textsuperscript{\textminus}}
+\newcommand{\x}{DBL}
+\newcommand{\xx}{RDBL}
+
+\newcommand{\sth}{1\textsuperscript{st}}
+\newcommand{\ndh}{2\textsuperscript{nd}}
+\newcommand{\rdh}{3\textsuperscript{rd}}
+\newcommand{\thh}{4\textsuperscript{th}}
+
+\newenvironment{bidtable}[1][]
+{\textbf{#1}
+  \begin{adjustwidth}{1em}{}
+    \addvspace{2pt}
+    \begin{tabbing}
+      xxxxxxxx\=xxxxxxxx\=xxxxxxxx\=xxxxxxxx\=xxxxxxxx\=xxxxxxxx\=\kill}
+{\end{tabbing}\end{adjustwidth}\bigskip}%
+
+
+\newcommand{\pdfc}{\texorpdfstring{\c{}}{C}}
+\newcommand{\pdfd}{\texorpdfstring{\d{}}{D}}
+\newcommand{\pdfh}{\texorpdfstring{\h{}}{H}}
+\newcommand{\pdfs}{\texorpdfstring{\s{}}{S}}
+
+\title{Nalja kah\vspace{-1em}}
+% \author{Kaarel Kivisalu}
+% \date{}
+
+
+\begin{document}
+\begin{multicols*}{2}
+\maketitle
+\tableofcontents
+
+\section{Lühendid}
+\begin{tabular}{l l}
+  (xxxx)       & suvaline mastide jaotus       \\
+  xxxx         & täpne mastide jaotus          \\
+  BAl          & ühtlane                       \\
+  SBAL         & poolühtlane või ühtlane       \\
+  F1           & sundiv üheks ringiks          \\
+  NF           & mittesundiv                   \\
+  FG           & geimini sundiv                \\
+  F<pakkumine> & pakkumiseni sundiv            \\
+  INV          & kutse                         \\
+  S/T          & slämmi proovimine             \\
+  S/O          & sulgev                        \\
+  MIN          & miinimum                      \\
+  MAX          & maksimum                      \\
+  M            & \h\ või \s\                   \\
+  MM           & kallismastid                  \\
+  m            & \c\ või \d\                   \\
+  mm           & odavmastid                    \\
+  NV           &                               \\
+  VUL          &                               \\
+  P/C          & passi või paranda             \\
+  DBL          & kontra                        \\
+  RDBL         & rekontra                      \\
+  RKCB         & Roman Key Card Blackwood 1430
+\end{tabular}
+
+\section{Üldised põhimõtted}
+
+\begin{itemize}
+\item Esimesena naturaalselt pakutud mast on (vähemalt) 5-ne; muidu paku NT, pärast võid ka 4-st masti pakkuda.
+\item Teisena pakutud mast on (vähemalt) 4-ne.
+\item Kahe 5-se masti korral paku kõrgemat (kallimat).
+\item Kahe 4-se masti korral lähimat (mida saad madalamal pakkuda).
+\item Vastaja pakutud uus mast on sundiv (F1) v.a juhul, kui ta jõud on ülalt piiratud (nt ta on passinud).
+\item NT pakkumine ei ole sundiv (kuid süsteemne kunstlik 2NT tihti on sundiv).
+\item Hüpe on alati nõrk ja tõkkeks, kui ta saab nõrk olla (on su esimene pakkumine või oled enne ainult passinud)
+\item Hüpe on tugev (max, kui su jõud on limiteeritud, F1 kui ei ole), kui ta ei saa nõrk olla (oled juba mingeid punkte lubanud) või kui sinu ees on juba 2 passi järjest (siis pole mõtet tõkestada, sest su pass lõpetaks pakkumise).
+\item Oma masti kordamine ei ole sundiv. Hüppega kordamine on sundiv.
+\item Oma masti kordamine vabas positsioonis (partneri viimane pakkumine ei olnud sundiv või vastane pakkus vahele), FG olukorras või lähimast NT pakkumisest kõrgemal lubab selle 1 võrra pikemaks.
+\item Oma masti kordamine partneri sundiva pakkumise peale madalamal kui lähim NT pakkumine ei luba masti pikemaks, vaid näitab nõrgemapoolset lehte (nt 1\h\ – 2\c\ – 2\h)
+\item 4. masti sund: kui 3 masti on meie poolt naturaalselt pakutud, siis 4. pakkumine on kunstlik ja sunnib (FG).
+\item Geimi pakkumine (3NT, 4\h \s\ 5\c \d ) on üldjuhul sulgev.
+\item Partneri masti toetamine geimist madalamal on tavaliselt kutsuv. See ei ole kutsuv partneri tõkkepakkumise peale (on tõkkeks) ja FG olukorras (kus see näitab kõvemat lehte, kui geimi hüppamine).
+\end{itemize}
+
+
+\newpage
+\section{Openings}
+
+\begin{bidtable}
+1\c*       \> 16\p\ or 17\p\ BAL, F1                         \\
+1\d*       \> a) 11-15                                                   \\
+       \> b) \sth \ndh NV         \>  \> 14-16 BAL                   \\
+1\h\s      \> 11-15, 5\p suit                                            \\
+1NT*       \> a) \sth \ndh NV         \>  \> 10,5-13, SBAL, 5M or 6m ok \\
+           \> b) \sth \ndh V, \rdh NV \>  \> 14-16, SBAL, 5M or 6m ok   \\
+           \> c) \rdh V, \thh         \>  \> 15-17, SBAL, 5M or 6m ok   \\
+2\c        \> 11-16, 6\p\c\ or 5\c\ + 4M                                \\
+2\d*       \> 3-10, 54 MM                                                \\
+2\h\s      \> 3-10, 5\p NV, 6\p VUL                                      \\
+2NT*       \> 3-10, 55 mm                                                \\
+% 2NT \thh \> 20-21, BAL                                                 \\
+3\c\d\h\s  \> 0-9, 6\p NV, 7\p VUL                                       \\
+3NT*       \> Gambling 7\p m AKQ, no outside A/K
+\end{bidtable}
+
+\begin{tabular}{c|c|c}
+  1NT & NV      & VUL   \\
+  \hline
+  \sth & 10,5-13 & 14-16 \\
+  \ndh & 10,5-13 & 14-16 \\
+  \rdh & 14-16   & 15-17 \\
+  \thh & 15-17   & 15-17
+\end{tabular}
+
+% \begin{tabular}{c|c|c}
+%       & NV    & VUL   \\
+%   1st & 19-20 & 19-20 \\
+%   2nd & 19-20 & 19-20 \\
+%   3rd & 19-20 & 20-21 \\
+%   4th & 20-21 & 20-21
+% \end{tabular}
+\section{Responses}
+\subsection{1\pdfc}
+
+% \begin{bidtable}[1\c\ - ?]
+% 1\d*        \> 0-7                                         \\
+%             \> 1\h\s/2\c\d \> 17-20, 5\p mast              \\
+%             \>             \> 0-4        \> PASS           \\
+%             \>             \> 5-7        \> paku           \\
+%             \> 2\h\s/3\c\d \> 21\p, 5\p mast, F1           \\
+%             \> 1NT         \> 18-20, BAL (edasi nagu 1NT)  \\
+%             \> 2NT         \> 21-24, BAL                   \\
+%             \> 3NT         \> 25\p, BAL                    \\
+% 1\h\s/2\c\d \> 8\p , 5\p mast, FG                          \\
+% 1NT         \> 8-11 või 14\p , FG                          \\
+%             \> 2\c*        \> BAL või \c\ mast             \\
+%             \>             \> 2\d\h\s3\c \> lähim 4ne mast \\
+% 2\h\s       \> 4-7, 6\p hea mast (min QJxxxx)              \\
+% 2NT         \> 12-13, FG                                   \\
+% 3\c\d\h\s*  \> 8\p, splinter (ehk 4441), FG                \\
+% % 3NT       \> ?                                           \\
+% % 4\c\d\h\s \> ?                                           \\
+% % 4NT       \> ?                                           \\
+% % 5NT       \> ?                                           \\
+% % 6NT       \> ?                                           \\
+% % 7NT       \> ?                                           \\
+% (\x)                                                       \\
+%             \> PASS        \> 0-4                          \\
+%             \> \xx         \> 5-7
+% \end{bidtable}
+
+% \newpage
+% Alternatiivne struktuur (1\c\ on siis 16\p, 2NT tugev, 1NT 14-16).
+
+\begin{bidtable}[1\c\ - ?]
+1\d* \> 0-7                            \\
+1\h* \> a) 8\p , 5\p \s, FG            \\
+     \> b) 11-13, BAL, FG              \\
+1\s* \> 8\p, 5\p\h, FG                 \\
+1NT* \> 8\p, 5\p\c, FG                 \\
+2\c* \> 8\p, 5\p\d, FG                 \\
+2\d* \> 8-10, FG                       \\
+2\h* \> a) UPH: 14\p, BAL, FG          \\
+     \> b) PH: 4-6, 55 MM              \\
+2\s* \> 8\p, (41)44 or 04(54), FG      \\
+2NT* \> 8\p, 44(14), FG                \\
+3\c* \> 7+ winners with any solid suit \\
+3\d* \> 8\p, 40(45), FG                    \\
+3\h* \> 8\p, 4405, FG                      \\
+3\s* \> 8-10, 4450, FG                     \\
+3NT* \> 11-13, 4450, NF                    \\
+4\c* \> 14/p, 4450, ST                     \\
+\end{bidtable}
+
+\begin{bidtable}[1\c\ - 1\d\ - ?]
+1\h  \> 4\p\h\ (if 4, (4441), (5440) or 5\p m), F1 \\
+     \> 1\s  \> 4\p\s                              \\
+     \> 1NT  \> 0-4, NF                            \\
+     \> 2\c* \> 5-7, 0-2\h, F1                     \\
+     \>      \> 2\d*     \> non-FG, waiting        \\
+     \>      \>          \> 2\h \> 2\h             \\
+     \>      \>          \> 2\s \> 3\s             \\
+     \>      \>          \> 2NT \> 6-7, BAL        \\
+     \>      \>          \> 3\c \> 5\p\c           \\
+     \>      \>          \> 3\d \> 5\p\d           \\
+     \>      \> 2\h      \> 6\p\h, FG              \\
+     \>      \> 2\s      \> 5\p\s, FG              \\
+     \>      \> 2NT      \> no 5\p suit, FG        \\
+     \>      \>          \> 3\c \> 5\p\c           \\
+     \>      \>          \> 3\d \> 5\p\d           \\
+     \>      \> 3\c      \> 5\p\s, FG              \\
+     \>      \> 3\d      \> 5\p\s, FG              \\
+     \> 2\d* \> 5-7, 3\h, F1                       \\
+     \> 2\h  \> 0-4, 4\p\h                         \\
+     \> 2\s* \> Splinter, 5\p\h                    \\
+     \> 2NT* \> 5-7, 5\p\h                         \\
+     \>      \> 3\c\d\s* \> Splinter               \\
+     \>      \> 3\h      \> 16-18, NF              \\
+     \>      \> 3NT*     \> 19\p, 5\p\h            \\
+     \>      \> 4\c\d*   \> Void, FG               \\
+     \>      \> 4\h      \> 19\p, 4\h              \\
+     \> 3\c* \> Splinter, 5\p\h                    \\
+     \> 3\d* \> Splinter, 5\p\h                    \\
+     \> 3\h  \> 5-7, 4\h                           \\
+1\s  \> 4\p\s (if 4, (4441), (5440) or 5\p m), F1  \\
+     \> 1NT  \> 0-4, NF                            \\
+     \> 2\c* \> 5-7, 2\m\s, F1                     \\
+     \>      \> 2\d*     \> non-FG, waiting        \\
+     \>      \>          \> 2\h \> 3\h             \\
+     \>      \>          \> 2\s \> 2\s             \\
+     \>      \>          \> 2NT \> 6-7, BAL        \\
+     \>      \>          \> 3\c \> 5\p\c           \\
+     \>      \>          \> 3\d \> 5\p\d           \\
+     \>      \> 2\h      \> 5\p\h, FG              \\
+     \>      \> 2\s      \> 6\p\s, FG              \\
+     \>      \> 2NT      \> no 5\p suit, FG        \\
+     \>      \>          \> 3\c \> 5\p\c           \\
+     \>      \>          \> 3\d \> 5\p\d           \\
+     \>      \> 3\c      \> 5\p\s, FG              \\
+     \>      \> 3\d      \> 5\p\s, FG              \\
+     \> 2\d* \> 5-7, 3\s, F1                       \\
+     \> 2\h  \> 5-7, 4\p\h                         \\
+     \> 2\s  \> 0-4, 4\p\s                         \\
+     \> 2NT* \> 5-7, 5\p\s                         \\
+     \>      \> 3\c\d\h* \> Splinter               \\
+     \>      \> 3\s      \> 16-18, NF              \\
+     \>      \> 3NT*     \> 19\p, 5\p\s            \\
+     \>      \> 4\c\d\h* \> Void, FG               \\
+     \>      \> 4\s      \> 19\p, 4\s              \\
+     \> 3\c* \> Splinter, 5\p\s                    \\
+     \> 3\d* \> Splinter, 5\p\s                    \\
+     \> 3\h* \> Splinter, 5\p\s                    \\
+     \> 3\s  \> 5-7, 4\s                           \\
+1NT  \> 17-19(18-20), BAL (system on)              \\
+2\c  \> no 4\p M, 5\p\c, NF                        \\
+2\d  \> no 4\p M, 5\p\d, NF                        \\
+2\h* \> Kokish, F1 if BAL, else FG                                \\
+     \> 2\s* \>                                    \\
+     \>      \> 2NT      \> 22-24(23-24), BAL      \\
+     \>      \> 3\c*     \> 5\p\h 4\p\c            \\
+     \>      \> 3\d*     \> 5\p\h 4\p\d            \\
+     \>      \> 3\h      \> 6\p\h                  \\
+     \>      \> 3\s*     \> 4\s 5\p\h              \\
+2\s* \> 5\p 5\p mm, F1                             \\
+2NT  \> 20-21(21-22), BAL (system on)              \\
+3\c  \> 5\p\c, may have major, FG                  \\
+3\d  \> 5\p\d, no major, FG                        \\
+3\h  \> 4\h 5\p\d, FG                              \\
+3\s  \> 4\s 5\p\d, FG                              \\
+3NT  \> 25-26, BAL                                 \\
+4NT  \> 27-29, BAL                                 \\
+5NT  \> 30-32, BAL                                 \\
+6NT  \> 33-36, BAL
+\end{bidtable}
+
+\begin{bidtable}[1\c\ - 1\h\ - ?]
+1\s \> 3\p\s, MTAB                                  \\
+    \> 1NT \> 11-13, BAL                            \\
+    \>     \> 2\c  \> Asks                          \\
+    \>     \>      \> 2\d       \> 4\s 4\h          \\
+    \>     \>      \>           \> 2\h \> 4\h, TAB4 \\
+    \>     \>      \>           \> 2\s \> 4\s, TAB4 \\
+    \>     \>      \>           \> 2NT \> CAB       \\
+    \>     \>      \> 2\h       \> 4\h              \\
+    \>     \>      \> 2\s       \> 4\s              \\
+    \>     \>      \> 2NT       \> no 4M            \\
+    \>     \> 2\d  \> CAB, no 4\p M                 \\
+    \>     \>      \> 2\h*      \> 0-2              \\
+    \>     \>      \> 2\s       \> 3-4              \\
+    \>     \>      \> 2NT       \> 5-6              \\
+    \>     \> 2\h  \> 5\p\h                         \\
+    \>     \> 2\s  \> 5\p\s                         \\
+    \>     \> 2NT* \> 5\p\s 5\p\h                   \\
+    \>     \> 3\c  \> 5\p\c                         \\
+    \>     \> 3\d  \> 5\p\d                         \\
+    \> 2\c \> 0, 5\p\s                              \\
+    \> 2\h \> 1, 5\s                                \\
+    \> 2\s \> 2, 5\s                                \\
+    \> 2NT \> 1, 6\p\s                              \\
+    \> 3\c \> 2, 6\p\s                              \\
+    \> 3\d \> 3, 5\p\s                              \\
+1NT \> 1-2\s, SBAL                                  \\
+    \> 2\c \> 4\p\h, 5\p\s                          \\
+    \>     \> 2\d  \> CAB                           \\
+    \>     \> 2\h  \> TAB4                          \\
+    \>     \> 2\s  \> 2\s, MTAB                     \\
+    \>     \>      \> 2NT       \> 5\s              \\
+    \>     \>      \> 3\c\d\h\s \> 0/1/2/3          \\
+    \> 2\d \> 4\p\h, 11-13 BAL                      \\
+    \>     \> 2\h  \> 4\h, TAB4                     \\
+    \> 2\h \> 6\p\s                                 \\
+    \>     \> 2\s  \> 2\s, TAB4                     \\
+    \> 2\s \> 5\s, no 4\h                           \\
+    \> 2NT \> 11-13 BAL, no 4\h                     \\
+2\c \> 5\p\c, SAB                                        \\
+    \> 2\d \> 11-13, BAL                            \\
+2\d \> 5\p\d, SAB                                        \\
+    \> 2\h \> 11-13, BAL                            \\
+2\h \> 5\p\h, SAB                                        \\
+    \> 2\s \> 11-13, BAL
+\end{bidtable}
+
+\begin{bidtable}[1\c\ - 1\s\ - ?]
+1NT \> 1-2\h, SBAL                                \\
+    \> 2\c \> 6\p\h                               \\
+    \>     \> 2\d \> 1\h, CAB                     \\
+    \>     \> 2\h \> 2\h, TAB4 with 6-card suit   \\
+    \> 2\d \> 4\s                                 \\
+    \>     \> 2\h \> 0-3\s, CAB                   \\
+    \>     \> 2\s \> 4\s, TAB4                    \\
+    \> 2\h \> Desire to play in NT, 0-3 controls  \\
+    \> 2\s \> Desire to play in NT, 4\p\ controls \\
+    \> 2NT \> 5\p\c                               \\
+    \>     \> 3\c \> 3\p\c, TAB                   \\
+    \>     \> 3\d \> CAB                          \\
+    \> 3\c \> 5\p\d                               \\
+    \>     \> 3\d \> 3\p\d, TAB                   \\
+    \>     \> 3\h \> CAB                          \\
+2\c \> 5\p\s, SAB                                 \\
+2\d \> 5\p\d, SAB                                 \\
+2\h \> 3\p\h, TAB                                 \\
+2\s \> 5\p\c, SAB
+\end{bidtable}
+
+\begin{bidtable}[1\c\ - 1NT - ?]
+2\c \> SBAL, desire to play in NT         \\
+    \> 2\d \> 4\h                         \\
+    \>     \> 2\h \> 4\h, TAB4            \\
+    \>     \> 2NT \> No 4-card major, CAB \\
+    \>     \> 3\c \> 3\p\c, TAB           \\
+    \> 2\h \> 0-3\h, 4\s                  \\
+    \>     \> 2\s \> 4\s, TAB4            \\
+    \>     \> 2NT \> 0-3\s, CAB           \\
+    \>     \> 3\c \> 3\p\c, TAB           \\
+    \> 2\s \> No 4-card major             \\
+2\d \> 5\p\s, SAB                         \\
+2\h \> 5\p\h, SAB                         \\
+2\s \> 5\p\d, SAB                         \\
+2NT \> 3\p\c, TAB
+\end{bidtable}
+
+\begin{bidtable}[1\c\ - 2\c\ - ?]
+2\d \> SBAL, desire to play in NT \\
+    \> 2\h \> No 4-card major     \\
+    \> 2\s \> 4\h                 \\
+    \>     \> 2NT \> 4\h, TAB4    \\
+    \>     \> 3\c \> 0-3\h, CAB   \\
+    \>     \> 3\d \> 3\p\d, TAB   \\
+    \> 2NT \> 4\s                 \\
+    \>     \> 3\c \> 4\s, TAB4    \\
+    \>     \> 3\d \> 3\p\d, TAB   \\
+    \>     \> 3\h \> 0-3\s, CAB   \\
+2\h \> 5\p\h, SAB                 \\
+2\s \> 5\p\d, SAB                 \\
+2NT \> 3\p\d, TAB                 \\
+3\c \> 5\p\c, SAB
+\end{bidtable}
+
+\begin{bidtable}[1\c\ - 2\d\ - ?]
+2\h \> 5\p\h                  \\
+    \> 2\s \> 2\h             \\
+    \> 2NT \> 3\h             \\
+    \> 3\c \> 4\h             \\
+2\s \> 5\p\s                  \\
+    \> 2NT \> 3\s             \\
+    \> 3\c \> 2\s             \\
+    \> 3\d \> 4\s             \\
+2NT \> Stayman                \\
+    \> 3\c \> 4\h, 2-4\s      \\
+    \> 3\d \> 4\s, 2-3\h      \\
+    \> 3NT \> No 4 card major \\
+3\c \> 5\p\c                  \\
+3\d \> 5\p\d                  \\
+3\h \> ?                      \\
+3\s \> ?                      \\
+3NT \> S/O                    \\
+4\h \> 6\p\h, S/O             \\
+4\s \> 6\p\s, S/O             \\
+\end{bidtable}
+
+\begin{bidtable}[1\c\ - 2\h\ - ?]
+2\s \> ? \\
+2NT \> ? \\
+3\c \> ? \\
+3\d \> ? \\
+3\h \> ? \\
+3\s \> ? \\
+3NT \> ? \\
+4\h \> ? \\
+4\s \> ? \\
+\end{bidtable}
+
+\begin{bidtable}[1\c\ - 2\s\ - ?]
+2NT \> Ask distribution                        \\
+    \> 3\c \> 1444                        \\
+    \> 3\d \> 4144                        \\
+    \> 3\h \> 04(45)                      \\
+\end{bidtable}
+
+\begin{bidtable}[1\c\ - 2NT - ?]
+3\c \> Ask distribution    \\
+    \> 3\d \> 4441\\
+    \> 3\h \> 4414\\
+\end{bidtable}
+
+\begin{bidtable}[1\c\ - 3\c\ - ?]
+\end{bidtable}
+
+\begin{bidtable}[1\c\ - 3\d\ - ?]
+\end{bidtable}
+
+\begin{bidtable}[1\c\ - 3\h\ - ?]
+\end{bidtable}
+
+\begin{bidtable}[1\c\ - 3\s\ - ?]
+4\c \> CAB \\
+\end{bidtable}
+
+\begin{bidtable}[1\c\ - 3NT - ?]
+\end{bidtable}
+
+\begin{bidtable}[1\c\ - 4\c\ - ?]
+\end{bidtable}
+
+
+\subsubsection{Asking Bids}
+
+\paragraph{Trump Asking Bids.}
+
+If responder suggests a suit and opener accepts it, the bid is usually TAB
+asking how many of the top three honors responder has and, in situations where
+nothing else is known about responder’s distribution, the length of the suit.
+Opener’s next bid after a TAB is SCAB unless it is a reserved bid.
+
+\subparagraph{Trump Asking with a 5+ Card Suit (TAB).}
+
+The most basic form of TAB only arises in the following two situations.
+\begin{itemize}
+\item Responder shows hearts, clubs, or diamonds (by bidding 1\s, 1NT, or 1\c) and
+  opener immediately accepts it (by bidding 2\h, 2NT or 2NT).
+\item Responder shows a minor, opener asks for a 4 card major, and after hearing
+  the response, opener bids the original minor at the 3 level.
+\end{itemize}
+In these cases, responder bids a number of steps showing length and strength of the trump suit.
+\begin{enumerate}
+\item 0 of the top 3 honors
+\item 1 of the top 3 honors; 5 card suit
+\item 2 of the top 3 honors; 5 card suit
+\item 1 of the top 3 honors; 6\p\ card suit
+\item 2 of the top 3 honors; 6\p\ card suit
+\item 3 of the top 4 honors
+\end{enumerate}
+
+\subparagraph{Trump Asking with a 4 Card Suit (TAB4).}
+
+ There are 4 classes of sitations
+in which this show up.
+\begin{itemize}
+\item • Responder’s initial bid shows a 3-suited hand. Opener’s bid of a suit
+  that responder is known to have is TAB4. (This includes 1♣ - 2♠; 2NT
+  auctions.)
+\item • Opener suggests NT and asks for a 4 card major, and responder answers
+  with an artificial bid. Openers bid of responder’s suit is TAB4.
+\item • Responder shows a major, opener suggests NT, and responder shows that
+  the major has 6 cards. Opener’s bid of responder’s major is TAB4 (although
+  responder has 6, not 4)
+\item • In the auction 1♣ - 1♥; 1♠ - 1NT; 2♣, responder should respond “both,
+  hearts, spades, neither” with the majors aligning as natural bids. In this
+  case, a 1 step bid is TAB4. Note that if responder bids 2♠, then 2NT is TAB4
+  putting us in a spade auction, and 3♣ is the CAB putting us in a notrump
+  auction.
+\end{itemize}
+In these situations, since the length is probably not longer that what is already
+known, responder just shows how many of the top 3 honors they have.
+\begin{enumarate}
+\item 0 of top 3 honors
+\item 1 of top 3 honors
+\item 2 of top 3 honors
+\item 3 of top 3 honors
+\end{enumarate}
+
+\subparagraph{Modified TAB.}
+
+There are a few auctions in which opener bids TAB on a
+guess. That is, responder has made a bid with multiple meanings, and opener bids
+a suit that he can support assuming responder actually has it. The responses are
+shifted up versions of the above bids with the cheapest bid meaning, “you guessed
+wrong.” In particular, the following auctions are modified TAB.
+\begin{itemize}
+\item • 1♣ - 1♥; 1♠. Here 1NT shows 11-13 balanced, and from 2♣ on shows
+012123 of the top 3 honors.
+\item • 1♣ - 1♥; 1NT - 2♣; 2♠. Here 2NT shows only 5 spades, and from 3♣ on
+shows 0123 of the top 3 honors.
+\item • 1♣- 2NT; 3♣/3♦. Here responder has shows a 3-suited hand with both
+majors, and opener has support for the minor bid. The cheapest response
+says, “You have bid my short suit,” and from 3♥/3♠ on shows 0123 of the
+top 3 honors.
+\end{itemize}
+
+12.2.
+\subparagraph{Support Asking Bids.}
+
+If opener opens 1♣, responder bids a positive suit or
+positive NT response, and opener then shows a suit, it is a SAB, asking responder
+whether they have support for the suit shown, and how good their controls are. An
+Ace counts as 2 controls and a King counts as 1. The responses are
+\begin{enumerate}
+\item 2- cards in the suit; 0-3 controls
+\item 2- cards in the suit; 4+ controls
+\item 3+ cards in the suit; 0-3 controls
+\item 3+ cards in the suit; 4+ controls.
+\end{enumerate}
+If responder shows support, opener’s next bid is SCAB unless it is a reserved
+bid.
+If responder does not show support, the bidding continues naturally. There are
+no more asking bids in the auction, and so the only question that can be asked
+is keycards. In particular, if opener bids his own suit, it shows 6. If opener bids
+responder’s suit, that promises 3-card support and is TAB. Responder should not
+pass game in their response.
+12.3. Specific Control Asking Bids. In a 1♣ - positive auction, when a strain
+has been agreed upon at a low level, subsequent bids by opener are SCAB. Specifically, all bids by opener after a TAB or after a SAB with a supporting response
+are SCAB unless they are reserved. SCABs ask responder about a suit in which
+opener thinks there may be a few losers.
+The cheapest 3 (4 in NT) non-reserved bids are all SCAB in the suit order
+♥♠♣♦, with the trump suit deleted. The responses are
+(1) 1st round control in that suit (void or A)
+(2) 2nd round control in that suit (singleton or K)
+(3) 3rd round control in that suit (doubleton or Q)
+(4) 4th round/no control in that suit
+Opener’s next bid is another SCAB.
+12.3.1. Reserved bids. When bidding SCABs, the following bids by opener are reserved (not SCAB):
+• A bid of the playing strain at or above game is to play
+• A 4 level bid in the strain above the playing strain is kickback
+• If the agreed strain is a minor, 3NT is also to play.
+The opener should skip over these bids when counting the number of steps to ask
+a SCAB. Responder should not skip in his answer.
+Note that in a minor suit auction, although 3NT is availible, 4♣ is not gerber.
+To ask about Aces, opener bids kickback, and then 4NT is a chicken out bid. This
+overrides the cases in which 4NT would otherwise be a queen ask.
+12.3.2. Reasks. If opener SCABs about a suit for the second time, he is asking for
+clarification about the first response. The answers are
+(1) Length (shortness)
+(2) Strength (the honor)
+(3) More strength (the honor, and also the one right below)
+(4) Even more strength (the honor, and the two right below)
+12.3.3. Abbrevated SCABs. Once we have passed game, i.e. once the question bid
+is above game, the answers to SCABs become
+(1) 1st round control in that suit (void or A)
+(2) 2nd round control in that suit (singleton or K)
+(3) 3rd round/no control in that suit
+PRECISION NOTES 17
+12.4. Control Asking Bids. In a notrumpy auction, if the declarer makes a bid
+finalizing a decision to play in notrump (and that bid is not just 3NT), the responder’s next bid shows either the number of controls in his hand where an Ace
+is 2 controls and a King is 1 or the number of points. Responder shows controls
+if they previously made a positive no-trump response. Responder shows points if
+they previously made a positive suit response. The steps are:
+(1) 0-2 controls or 8-9 HCP
+(2) 3-4 controls or 10-11 HCP
+(3) 5-6 controls or 12-13 HCP
+etc.
+There is one place in which we use a 8-10, 11+ distinction for points in notrump.
+• After 1♣ - 1♠; 1NT auction, a bid of 2♥ or 2♠ accepts notrump and shows
+8-10 or 11+ HCP, respectively.
+\newpage
+\subsection{1\pdfd}
+
+
+\begin{bidtable}[1\d\ - ?]
+PASS      \> 0-3                                              \\
+1\h       \> 4\p , (3)4\p mast, F1                            \\
+1\s       \> 4\p , (3)4\p mast, F1                            \\
+          \> 1NT        \> 3\m\s                              \\
+          \>            \> 2\c* \> Checkback                  \\
+          \>            \>      \> 2\d*  \> MIN, 2\m\h        \\
+          \>            \>      \> 2\h   \> MAX, 3\h          \\
+          \>            \>      \> 2\s   \> MIN, 3\h          \\
+          \>            \>      \> 2NT   \> MAX, 2\m\h        \\
+          \>            \>      \> 3\c\d \> MAX, 3\h, 5\p m   \\
+          \> 2\c*       \> 54 mm                              \\
+          \> 2\d        \> 6\p\d                              \\
+          \> 2\h        \> ?                                  \\
+          \> 2\s        \> ?                                  \\
+          \> (1NT2\c\d) \>                                    \\
+          \>            \> \x   \> 3\s                        \\
+          \>            \> 2\s  \> 4\s                        \\
+1NT       \> 7-10(11), BAL, no 4M, NF                         \\
+          \> 2\c*       \> 54 mm                              \\
+          \> 2\d        \> 6\p\d                              \\
+          \> 2\h        \> ?                                  \\
+          \> 2\s        \> ?                                  \\
+2\c       \> 11\p, (4)5\p\c, no major unless FG and 6\p\c, F1 \\
+2\d       \> 11\p, (4)5\p\d, no major unless FG and 6\p\c, F1 \\
+2\h       \> \hl{10\m, 5\p4\p MM}                             \\
+2\s       \> \hl{11\p, 5\p4\p MM, INV opposite 11-13 BAL}     \\
+2NT       \> 11-13, BAL, no 4M, INV                           \\
+          \> 3\c*       \> 54 mm                              \\
+          \> 3\d        \> 6\p\d                              \\
+          \> 3\h        \> ?                                  \\
+          \> 3\s        \> ?                                  \\
+3\c       \> Pre/Mix, 5\p 5\p mm, P/C                         \\
+3\d       \> 6\p\d, preemptive                                \\
+3\h       \> 6\p\h, preemptive                                \\
+3\s       \> 6\p\s, preemptive                                \\
+3NT       \> 13-15, BAL, no 4M, S/O                           \\
+4\c       \> 6\p 5\p mm, P/C                                  \\
+4\d       \> 7\p\d, preemptive                                \\
+4\h       \> 7\p\h, S/O                                       \\
+4\s       \> 7\p\s, S/O                                       \\
+4NT       \> RKCB in NT
+% (\x)                                                        \\
+        % \> ?                                                \\
+% (1\h)                                                         \\
+%           \> \x         \> 8\p , 4\s                          \\
+%           \> 1\s        \> 8\p , 5\p\s                        \\
+% (1\s)                                                         \\
+%           \> \x         \> 8\p , 4\h                          \\
+%           \> 1NT        \> BAL                                \\
+%           \> 2\c        \> 5\p\c                              \\
+%           \> 2\d        \> 5\p\d                              \\
+%           \> 2\h        \> 8\p, 5\p\h                         \\
+%           \> 2\s        \> kutse 3NTsse, piduri küsimine
+\end{bidtable}
+
+\begin{bidtable}[1\d\ - 1\h\ - ?]
+1\s             \> 4\s                                             \\
+                \> 1NT  \> Nat, no game, S/O                       \\
+                \> 2\c* \> FG                                      \\
+                \>      \> 2\d      \> 5\p\d, 2\m\h                \\
+                \>      \> \hl{2\h} \> 3\h                         \\
+                \>      \> 2\s      \> 11-12, 5\s 6\d              \\
+                \>      \> 2NT      \> 2\h, BAL (4234, 4243, 4144) \\
+                \>      \>          \> 3\h* \> 4\s                 \\
+                \>      \> 3\c      \> 4045, 4144, 4135            \\
+                \>      \> 3\d      \> Solid 6\p\d                 \\
+                \> 2\d* \> GT                                      \\
+                \>      \> 2\h      \> 11-12, 3\h                  \\
+                \>      \> 2\s      \> ?                           \\
+                \>      \> 2\NT     \> 11-12, 0-2\h                \\
+                \>      \> 3\c      \> 13-15, 4144, 4054           \\
+                \>      \> 3\d      \> 13-15, 6\d, 0-2\h           \\
+                \>      \> 3\h      \> 13-15, 3\h                  \\
+                \>      \> 3\s      \> ?                           \\
+                \>      \> 3NT      \> 13-15, 2\h (\c\ stop), NF   \\
+                \> 2\h  \> 6\p\h, NF                               \\
+                \> 2\s  \> 7-10, 4\s, NF                           \\
+                \> 2NT  \> 11-12, BAL, NF                          \\
+                \> 3\c  \> 4\h 5\p\c, FG                           \\
+                \> 3\d  \> 4\h 5\p\d, FG                           \\
+                \> 3\h  \> FG, ST                                  \\
+                \> 3\s  \> 11-12, 4\s, NF                          \\
+                \> 3NT  \> S/O                                     \\
+                \> 4\c* \> 4\s, splinter, FG                       \\
+                \> 4\d* \> 4\s, splinter, FG                       \\
+                \> 4\h  \> S/O                                     \\
+                \> 4\s  \> S/O                                     \\
+1NT             \> 11-13(14), no singleton, BAL                    \\
+                \> 2\c  \> 8\p, 5\p\h, F1                          \\
+                \>      \> 2\d      \> 11-12, 2\h, F1              \\
+                \>      \> 2\h      \> 11-12, 3\h, NF              \\
+                \>      \> 2\s      \> 13, 3\h, INV                \\
+                \>      \> 2NT      \> 13, 2\h, INV                \\
+                \> 2\d  \> 8\p, 3-4\h, F1                          \\
+                \>      \> 2\h      \> 13, 2-3\h, NF               \\
+                \>      \> 2\s      \> 11-12, 2\h, INV             \\
+                \>      \> 2NT      \> 11-12, 3\h, INV             \\
+                \> 2\h  \> (5)6\p\h, S/O                           \\
+                \> 2\s  \> Any 3-suiter, FG                        \\
+                \>      \> 2NT      \> Relay                       \\
+                \>      \>          \> 3\c* \> 5\h, Any short      \\
+                \>      \>          \>      \> 3\d \> Relay        \\
+                \>      \>          \>      \>     \> 3\h \> 0-1\d \\
+                \>      \>          \>      \>     \> 3\s \> 0-1\s \\
+                \>      \>          \>      \>     \> 3NT \> 0-1\c \\
+                \>      \>          \> 3\d* \> 4\h, 0-1\d          \\
+                \>      \>          \> 3\h* \> 4\h, 0-1\c          \\
+                \>      \>          \> 3\s* \> 4\h, 0\s            \\
+                \>      \>          \> 3NT* \> 4\h, 1\s            \\
+                \> 2NT  \> Transfer, 6\p m                         \\
+                \>      \> 3\c      \> Accept                      \\
+                \>      \>          \> Pass \> 6\p\c, to play      \\
+                \>      \>          \> 3\d  \> 6\p\d, S/O          \\
+                \> 3\c  \> 5\p\h 5\p\c, FG                         \\
+                \> 3\d  \> 5\p\h, 5\p\d, FG                        \\
+2\c*            \> 5\p 4\p mm, not 6\d 4\c                         \\
+                \> 2\c  \> 3\p\d, S/O                              \\
+                \> 2\h  \> 6\h, S/O                                \\
+                \> 2\s* \> FG                                      \\
+                \>      \> 2NT      \> 31(54)                      \\
+                \>      \> 3\c      \> 22(54)                      \\
+                \>      \> 3\d      \> (21)(55)                    \\
+                \>      \> 3\h      \> 3\h                         \\
+                \> 2NT  \> INV                                     \\
+                \> 3\c  \> 4\p\c, INV                              \\
+                \> 3\d  \> 4\p\d, INV                              \\
+                \> 3\h  \> 6\p\h, INV                              \\
+                \> 3\s  \> ?                                       \\
+                \> 3NT  \> S/O                                     \\
+                \> 4\h  \> 6\p\h, S/O                              \\
+2\d             \> 6\p\d, MIN                                      \\
+                \> 2\h  \> 6\h, NF                                 \\
+                \> 2\s* \> FG                                      \\
+                \>      \> 2NT      \> 3161, 2263, 3262            \\
+                \>      \> 3\c      \> 6\d 4\c                     \\
+                \>      \> 3\d      \> 7\d                         \\
+                \>      \> 3\h      \> 3\h                         \\
+                \> 2NT  \> INV                                     \\
+                \> 3\c  \> 4\p\c, INV                              \\
+                \> 3\d  \> 4\p\d, INV                              \\
+2\h             \> 4\h, MIN, BAL                                   \\
+2\s             \> a) 13-15, 5\s 6\d                               \\
+                \> b) 13-15, 3\p\h, splinter                       \\
+                \> 2NT  \> Asks and shows some values              \\
+                \>      \> 3\c      \> Low (\c) splinter           \\
+                \>      \> 3\d      \> 5\s 6\p\d                   \\
+                \>      \> 3\h      \> High (\s) splinter          \\
+                \> 3\c  \> ?                                       \\
+                \> 3\d  \> Bad hand, pass or correct to 3\h        \\
+                \> 3\h  \> FG, 6\p\h                               \\
+2NT             \> 3\h 6\p\d, not MIN (with min bid 2\d), F1       \\
+3\c             \> 55 mm, MAX, NF                                  \\
+3\d             \> 2\m\h 6\p\d MAX                                 \\
+3\h             \> 4\h, MAX, stronger than 2\s, some short         \\
+                \> 3\s  \> Asks                                    \\
+                \>      \> 3NT, \c\ splinter                       \\
+                \>      \> 4\c, \s\ splinter                       \\
+3\s             \> 4\h, some void (3NT asks LH)                    \\
+3NT             \> Offer to play with good long diamond, usually 7 \\
+4\c             \> 4\h, 1\c                                        \\
+4\d             \> 4\h, 1\s                                        \\
+4\h             \> 5\p\h, 6\p\d                                    \\
+% (1\s NT2\c\d) \>                                                 \\
+%               \> \x   \> 3\h                                     \\
+%               \> 2\h  \> 4\h
+\end{bidtable}
+
+\newpage
+\subsection{1\pdfh}
+
+\begin{bidtable}[1\h\ - ?]
+PASS       \> 0-6, 2\m\h\ või 0-4, 3\h                    \\
+1\s        \> 7\p, 4\p\s , F1                             \\
+           \> 1NT        \> ?                             \\
+           \>            \> 2\c* \> Checkback             \\
+           \> (1NT2\c\d) \>                               \\
+           \>            \> \x   \> 3\s                   \\
+           \>            \> 2\s  \> 4\s                   \\
+1NT        \> 7-11, 2\m\h                                 \\
+2\c\d      \> a) 11\p, 5\p mast, 2\m\h, ebaühtlane, F1    \\
+           \> b) 16\p, 4\p mast, 2\m\h, ST                \\
+2\c* \rdh  \> Drury                                       \\
+           \> 2\d*       \> 9\m                           \\
+           \> 2\h        \> 10-12                         \\
+           \> 2\s        \> 8-12(13), 4\p\s               \\
+           \> 3\h        \> 13-16                         \\
+2\h        \> 5-9, 3\p\h, mänguks                         \\
+2\s        \> ?                                           \\
+2NT*       \> a) 10-11, 3\p\h, F3\h                       \\
+           \> b) 16\p, 3\p\h, FG                          \\
+           \> 3\c\d      \> 4\p mast, F1                  \\
+           \> 3\h        \> MIN, ei ole kõrvalmasti       \\
+           \> 3\s/4\c\d* \> MAX, singel/renoo             \\
+           \> 3NT        \> MAX, 5\h, (5332)              \\
+           \> 4\h        \> MAX, 6\p\h, (6322) või (7222) \\
+3\h*       \> 0-5, 4\p\h, tõkkeks                         \\
+3NT        \> 12-15, 2\m\h, BAL                           \\
+4\h        \> 12-15, 3\p\h, pole slämmihuvi               \\
+3\s 4\c\d* \> Splinter, u 13, 4\p\h                       \\
+           \> 4\h        \> sulgev                        \\
+           \> uus mast*  \> kontroll                      \\
+           \> 4NT*       \> RKCB
+\end{bidtable}
+
+% \begin{bidtable}[1\d\ - 1\h\ - 1\s\ - 2\c\ - ? \\ 1\d\ - 1\s\ - 1NT - 2\c\ - ?\\ 1\h\ - 1\s\ - 1NT - 2\c\ - ?]
+
+% \end{bidtable}
+
+\subsection{1\pdfs}
+
+\textbf{1\s\ - ?}
+\begin{bidtable}
+Kui ei ole toetust                                      \\
+PASS      \> 0-6                                        \\
+2\c\d     \> a) 11\p, 5\p mast, ebaühtlane, F1          \\
+          \> b) 16\p, 4\p mast, FG                      \\
+2\c* \rdh \> Drury                                      \\
+1NT       \> 7-11,                                      \\
+3NT       \> 12-15, BAL                                 \\
+Kui on toetus                                           \\
+PASS      \> 0-4                                        \\
+2NT*      \> a) 10-11, 3\p\s, F3\s                      \\
+          \> b) 16\p, 3\p\s, S/T                        \\
+          \> 3\c\d\h   \> 4\p mast, F1                  \\
+          \> 3\s       \> MIN, ei ole kõrvalmasti       \\
+          \> 4\c\d\h*  \> MAX, singel/renoo             \\
+          \> 3NT       \> MAX, 5\s, (5332)              \\
+          \> 4\s       \> MAX, 6\p\s, (6322) või (7222) \\
+2\s       \> 5-9, 3\p\s, mänguks                        \\
+3\s*      \> 0-5, 4\p\s, tõkkeks                        \\
+4\s       \> 12-15, 3\p\s                               \\
+4\c\d\h*  \> Splinter, u 13, 4\p\s                      \\
+          \> 4\s       \> S/O                           \\
+          \> uus mast* \> kontroll                      \\
+          \> 4NT*      \> RKCB
+\end{bidtable}
+
+% \vfil\null
+% \columnbreak
+
+\newpage
+\subsection{1NT}
+
+\begin{bidtable}[1NT\ - ?]
+PASS   \> 0-8, muu ei sobi        \\
+2\c*   \> a) 0-7, 4441/4351/3451  \\
+       \> b) 8-9, 5\s 4\h         \\
+       \> c) 10\p, 4\p M või 54MM \\
+2\d*   \> 5\p\s                   \\
+2\h*   \> 5\p\h                   \\
+2\s*   \> 0-7 või 15\p, 6\p\c     \\
+3\c*   \> 0-7 või 15\p, 6\p\d     \\
+2NT    \> 8-9, no 4M, INV         \\
+3NT    \> 10-15, no 4M            \\
+4\c*   \> 16-17, RKCB             \\
+4NT*   \> 18-21, kutse 6NTsse     \\
+5NT*   \> 22\p, kutse 7NTsse
+% (?)                            \\
+% Pass \> 0-7 p                   \\
+% ?    \> 8\p p
+\end{bidtable}
+
+\begin{bidtable}[1NT - 2\c\ - ?]
+2\d* \> no 4\p M                      \\
+     \> PASS \> 0-7                   \\
+     \> 2\h  \> nõrk, 4\p 4\p MM, NF  \\
+     \> 2\s  \> 8-9, 5\s 4\h, INV, NF \\
+     \> 2NT  \> 8-9, INV              \\
+     \> 3\c  \> 10\p, (5)6\p\c, FG    \\
+     \> 3\d  \> 10\p, (5)6\p\d, FG    \\
+     \> 3\h* \> 10\p, 5\s 4\h, FG     \\
+     \>      \> 3NT \> 2\s            \\
+     \>      \> 4\s \> 3\s            \\
+     \> 3\s* \> 10\p, 4\s 5\h, FG     \\
+     \>      \> 3NT \> 2\h            \\
+     \>      \> 4\h \> 3\h            \\
+     \> 3NT  \> S/O                   \\
+     \> 4NT  \> INV to 6NT            \\
+2\h  \> 4\p\h                         \\
+     \> PASS \> 0-7                   \\
+     \> 2\s  \> 8-9, 5\s 4\h, INV     \\
+     \> 2NT  \> 8-9, 3\m\h, INV       \\
+     \> 3\c  \> 10\p, (5)6\p\c, FG    \\
+     \> 3\d  \> 10\p, (5)6\p\d, FG    \\
+     \> 3\h  \> 8-9, 4\h, INV         \\
+     \> 3\s  \> 10\p, 5\s 4\h, FG     \\
+     \> 3NT  \> S/O                   \\
+     \> 4\h  \> S/O                   \\
+2\s  \> 4\p\s, no 4\p\h               \\
+     \> PASS \> 0-7                   \\
+     \> 2NT  \> 8-9, 3\m\s, INV       \\
+     \> 3\c  \> 10\p, (5)6\p\c, FG    \\
+     \> 3\d  \> 10\p, (5)6\p\d, FG    \\
+     \> 3\h  \> 10\p, 4\s 5\h, FG     \\
+     \> 3\s  \> 8-9, 4\s, INV         \\
+     \> 3NT  \> S/O                   \\
+     \> 4\s  \> S/O
+\end{bidtable}
+
+\begin{bidtable}[1NT - 2\d\ - 2\h\ - ?]
+PASS \> 0-7                  \\
+2\s  \> 8-9, 4\s 5\h, INV    \\
+2NT  \> 8-9, 5\h, SBAL, INV  \\
+3\c  \> 10\p, 4\p\c, FG      \\
+3\d  \> 10\p, 4\p\d, FG      \\
+3\h  \> 8-9, (5)6\p\h, INV   \\
+3\s  \> ?                    \\
+3NT  \> 10\p, 5\h, SBAL, P/C \\
+4\c  \> ?                    \\
+4\d  \> ?                    \\
+4\h  \> 10\p, 6\p\h, S/O
+\end{bidtable}
+
+\begin{bidtable}[1NT - 2\h\ - 2\s\ - ?]
+PASS \> 0-7                  \\
+2NT  \> 8-9, 5\s, SBAL, INV  \\
+3\c  \> 10\p, 4\p\c, FG      \\
+3\d  \> 10\p, 4\p\d, FG      \\
+3\h  \> ?                    \\
+3\s  \> 8-9, (5)6\p\s, INV   \\
+3NT  \> 10\p, 5\s, SBAL, P/C\\
+4\c  \> ?                    \\
+4\d  \> ?                    \\
+4\h  \> ?                    \\
+4\s  \> 10\p, 6\p\s, S/O
+\end{bidtable}
+
+% \subsubsection{Lebensohl}
+
+% \begin{itemize}
+% \item Responder’s Doubles and Redoubles over a 2-level bid are penalty-oriented.
+% \item Responder’s Doubles over a 3-level bid are Take-out.
+% \item If Responder bids 2NT, Opener MUST bid 3.
+% \item Responder’s 2-level suit overcalls are to play.
+% \item Responder’s 3-level suit overcalls are forcing.
+% \item If a Responder’s auction includes 2NT, she has stopper.
+% \end{itemize}
+
+% \begin{bidtable}
+
+% \end{bidtable}
+
+\newpage
+\subsection{2\pdfc}
+
+\begin{bidtable}[2\c\ - ?]
+2\d*  \> 9\p, 4\p M või 12\p, 5\p mast                   \\
+      \> 2\h\s   \> 4-ne mast                            \\
+      \>         \> 3\d\h\s \> 12\p, 5-ne mast, FG       \\
+      \> 2NT*    \> 15-16, no 4M, FG                     \\
+      \>         \> 3\d\h\s \> 12\p, 5-ne mast, FG       \\
+      \> 3\c     \> 12-14, no 4M                         \\
+      \>         \> 3\d\h\s \> 12\p, 5-ne mast, FG       \\
+      \> 3\d\h\s \> 15-16, 6\p\c\ ja 4-ne kõrvalmast, FG \\
+      \>         \> 3\h\s   \> 12\p, 5-ne mast           \\
+2\h\s \> 7-11, 5-ne mast, NF                             \\
+2NT   \> 9-11, no 4M, 2\m\c , INV                        \\
+3\c   \> 5-8, 3\p\c                                      \\
+4\c   \> 9-11, no 4M, 3\p\c , INV                        \\
+3NT   \> 12\p, no 4M
+\end{bidtable}
+
+\subsection{2\pdfd}
+
+\begin{bidtable}[2\d\ - ?]
+Pass  \> 6\p\d , ei taha mängida kallismaste \\
+2\h\s \> parem kallismast, sulgev            \\
+2NT   \> 14\p , küsib                        \\
+      \> 3\c* \> (1. aste) 5-8, ärtu parem   \\
+      \> 3\d* \> (2. aste) 5-8, pada parem   \\
+      \> 3\h  \> (3. aste) 9-11, ärtu parem  \\
+      \> 3\s  \> (4. aste) 9-11, pada parem  \\
+3\c\d \> 14\p , 6\p mast, F1
+\end{bidtable}
+
+\subsection{2\pdfh}
+
+\begin{bidtable}[2\h\ - ?]
+PASS      \> enamasti pakud seda                  \\
+2\s/3\c\d \> 14\p , 5-ne hea mast, F1             \\
+2NT*      \> 14\p , küsib, (hea mast min 2 AKQst) \\
+          \> 3\c \> (1. aste) 5-8, kehv mast      \\
+          \> 3\d \> (2. aste) 5-8, hea mast       \\
+          \> 3\h \> (3. aste) 9-11, kehv mast     \\
+          \> 3\s \> (4. aste) 9-11, hea mast      \\
+3\h       \> 0-13, 3\p\h, tõkkeks                 \\
+4\h       \> S/O
+\end{bidtable}
+
+% \vfill\null
+% \columnbreak
+\subsection{2\pdfs}
+
+\begin{bidtable}[2\s\ - ?]
+PASS    \> enamasti pakud seda                   \\
+3\c\d\h \> 14\p p, 5-ne hea mast, F1             \\
+2NT*    \> 14\p p, küsib, (hea mast min 2 AKQst) \\
+        \> 3\c \> (1. aste) 5-8 p, kehv mast     \\
+        \> 3\d \> (2. aste) 5-8 p, hea mast      \\
+        \> 3\h \> (3. aste) 9-11 p, kehv mast    \\
+        \> 3\s \> (4. aste) 9-11 p, hea mast     \\
+3\s     \> 0-13 , 3\p\s, tõkkeks                 \\
+4\s     \> S/O
+\end{bidtable}
+
+\subsection{2NT}
+
+\begin{bidtable}[2NT - ?]
+3\c\d* \> 0-16, S/O                                 \\
+4\c\d* \> 17-20, 3\p mast, INV                      \\
+5\c\d* \> 21\p, 3\p mast, S/O                       \\
+PASS   \> 12-19, pidamine kallismastides, pole tuge \\
+3NT    \> 20\p, pidamine kallismastides
+\end{bidtable}
+
+
+
+\subsection{3NT}
+
+\begin{bidtable}[3NT - ?]
+PASS \> Pidajad kõigis mastides peale partneri oma \\
+4\c* \> P/C (enamasti pakud seda)                  \\
+     \> 4\d \> parandad selleks kui on ruutut      \\
+4\d* \> küsib lühidust                             \\
+     \> 4\h \> splinter                            \\
+     \> 4\s \> splinter                            \\
+     \> 4NT \> 7222                                \\
+     \> 5\c \> 7\p\c , ruutu singel või renoo      \\
+     \> 5\d \> 7\p\d , risti singel või renoo      \\
+5\c* \> P/C                                        \\
+     \> 5\d \> parandad selleks kui on ruutut      \\
+5\d* \> S/O, kui tead, et partneril on ruutu
+\end{bidtable}
+
+\newpage
+
+\section{Defensive bidding}
+
+\subsubsection{1\pdfc}
+
+
+
+
+\section{Võistlev pakkumine}
+\subsection{Overcalls}
+
+\subsubsection{Simple Overcalls}
+
+\begin{bidtable}
+1X \> 8-16, 5\p suit     \\
+2X \> 10-16, 5\p suit    \\
+3X \> 12-16, (5)6\p suit
+\end{bidtable}
+
+After overcall 2\c is Drury.\\
+
+\begin{bidtable}[(1X) - 1\h\ - (Pass) - 2\c*]
+2\d*       \> 9\m                           \\
+2\h        \> 10-12                         \\
+2\s        \> 8-12(13), 4\p\s               \\
+3\h        \> 13-16
+\end{bidtable}
+
+\begin{bidtable}[(1X) - 1\s\ - (Pass) - 2\c*]
+2\d* \> 9\m   \\
+2\s  \> 10-12 \\
+3\h  \> 13-16
+\end{bidtable}
+
+\subsection{Doubles}
+
+\subsubsection{Takeout}
+
+\subsubsection{Negative}
+
+\subsubsection{Responsive}
+
+\subsubsection{Maximal}
+
+\subsubsection{Support}
+
+\subsubsection{Balancing}
+
+\subsubsection{Penalty -- Lead Directing}
+
+\subsubsection{Penalty}
+
+
+
+
+\subsection{Cuebids}
+Cuebid - A forcing bid in a suit which bidder does not wish to play.
+
+\subsection{1\pdfc}
+
+[CRASH]
+
+\begin{bidtable}[(1\c\ 15\p\ art) - ?]
+Kahemastilehed vähemalt 44 NV, 54 VUL \\
+\x        \> \s\c\ või \h\d\          \\
+1\d*      \> \s\h\ või \d\c           \\
+1\h\s     \> 5\p mast                 \\
+1NT*      \> \s\d\ või \h\c\          \\
+2\c\d\h\s \> 6\p mast
+\end{bidtable}
+
+Edasine pakkumise käik: pakutakse kordamööda madalaimat sobivat masti, kui partner pani sobiva, siis passid.
+\begin{enumerate}[wide, nosep]
+\item Kahemastilehte lubavate pakkumiste peale valib vastaja mõlema variandi seast välja sobivama ja pakub madalaimat sobivat masti. Näiteks olukorras (1\c) - X - (pass) - ? hindab vastaja \h\d seast sobilikumaks ärtu ja \s\c seast risti. Sobilikest mastidest lähim on ärtu ja seega pakub ta 1\h*, mis on P/C.
+\item  Kui vastaja pakutud mast on üks avaja mastidest (näites \h\d), siis ta passib. Kui avajal olid aga teised mastid (näites \s\c), siis pakub ta oma mastidest lähimat (näites 1\s, mis ütleb, et tal olid mustad).
+\item  Selle peale saab avaja valida juba sobiva masti (antud näites \c). Nii saab leida parima sobiva osamängu madalaimal võimalikul tasemel – ei jäeta vahele ühtegi sobivat masti.
+\end{enumerate}
+Kõik vastaja pakkumised Crashile, mis lähevad üle mõlemast avaja ühe variandi pakkumisest, on naturaalsed. Näiteks (1\c) - \x - (PASS) järel 1\s ja kõrgemad pakkumised (läks üle \h\d). Või (1\c) - 1\d* - (1\s) järel 2\h ja kõrgemad (läks üle \d\c).
+
+Vastaja X on alati P/C.
+
+Kõrgusest sõltumata palub vastaja NT pakkumine avajal pakkuda oma madalamat masti (tõkestamiseks).
+
+\subsection{1\pdfh}
+
+\begin{bidtable}[(1\h) - ?]
+2\h* \> 12\p, 5\p\s 5\p m             \\
+     \> 2NT \> küsib                  \\
+     \>     \> 3\c\d \> MIN, 5\p mast \\
+     \>     \> 3\h   \> MAX, 5\p\c    \\
+     \>     \> 3\h   \> MAX, 5\p\d    \\
+     \> 2\s \> S/O                    \\
+     \> 3\c \> P/C                    \\
+     \> 4NT \> RKCB, \s trump
+\end{bidtable}
+\subsection{1\pdfs}
+
+\begin{bidtable}[(1\s) - ?]
+2\s* \> 12\p, 5\p\s 5\p m             \\
+     \> 2NT \> küsib                  \\
+     \>     \> 3\c\d \> MIN, 5\p mast \\
+     \>     \> 3\h   \> MAX, 5\p\c    \\
+     \>     \> 3\h   \> MAX, 5\p\d    \\
+     \> 2\h \> S/O                    \\
+     \> 3\c \> P/C                    \\
+     \> 4NT \> RKCB, \h trump
+\end{bidtable}
+\subsection{1NT}
+
+[DONT] Vastase 1NT avangu korral meil üldiselt geimi ei ole, st kui pakume, siis
+sobivaima osamängu leidmiseks. Pakkumisel on oluline lehe teravus ja et pildid
+oleksid pikkades mastides. Kahemastilehed peaksid olema vähemalt 54, kallis
+tsoonis olles pigem 55. Kõigi DONTi pakkumiste peale (va 2\s ) on järgmine mast
+P/C (ka siis, kui vastased panevad kontra). Kui vastased pakuvad DONTile vahele
+midagi muud kui X, siis on P/C pakkumiseks X. DONTile vastaja kõik muud
+pakkumised on naturaalsed.
+
+\begin{bidtable}[(1NT 15 on vahemikus, SBAL) - ?]
+Kahemastilehed 54 NV, 55 VUL       \\
+\x   \> 10\p, 6\p mast             \\
+2\c* \> 2 masti, \c\ ja kõrgem, P/C \\
+2\d* \> 2 masti, \d\ ja kõrgem, P/C \\
+2\h* \> 2 masti, \h\ ja \s, P/C     \\
+2\s  \> 6\p\s, nõrgem kui \x
+\end{bidtable}
+
+\begin{bidtable}[(1NT 15 pole vahemikus, SBAL) - ?]
+X \> 13\p, trahviks                   \\
+  \> (põgeneb)                        \\
+  \>  \> PASS \> sundiv (väljavõtuks) \\
+  \>  \> X    \> trahviks
+\end{bidtable}
+
+\subsection{2NT}
+
+\begin{bidtable}[(2NT odavad vms) - ?]
+X    \> hea leht, trahvihuvi vähemalt ühe odavmasti suhtes \\
+     \> edasi kontrad trahviks                             \\
+3\c* \> mõlemad kallid, \h\ on parem                       \\
+3\d* \> mõlemad kallid, \s\ on parem
+\end{bidtable}
+
+\subsection{2 minor}
+
+\begin{bidtable}[(2\c\d\ kallid vms) - ?]
+X   \> vähemalt üks 4\p M     \\
+2\h \> 54 odavad, risti parem \\
+2\s \> 54 odavad, ruutu parem
+\end{bidtable}
+
+\newpage
+\subsection{2X preempt}
+
+\begin{bidtable}[(2\d\ preempt) - ?]
+\x   \> ?               \\
+2\h  \> 11-16, 5\p\h    \\
+2\s  \> 11-16, 5\p\s    \\
+2NT  \> 16-19, SBAL     \\
+3\c  \> 13-16, (5)6\p\c \\
+3\d* \> piduri küsimine \\
+3\h  \> tugev, 6\p\h    \\
+3\s  \> tugev, 6\p\s    \\
+3NT  \> tugev, piduriga \\
+4\c* \> 5\c 5M          \\
+4\d* \> 55 MM
+\end{bidtable}
+
+\begin{bidtable}[(2\d\ multi) - ?]
+\x  \> ?               \\
+2\h \> 11-16, 5\p\h    \\
+2\s \> 11-16, 5\p\s    \\
+2NT \> 16-19, SBAL     \\
+3\c \> 13-16, (5)6\p\c \\
+3\d \> 13-16, (5)6\p\d \\
+3\h \> tugev, 6\p\h    \\
+3\s \> tugev, 6\p\s    \\
+3NT \> tugev, piduriga \\
+4\c \> 5\s 5\c         \\
+4\d \> 5\s 5\d
+\end{bidtable}
+
+\begin{bidtable}[(2\h\ preempt) - ?]
+\x  \> ?               \\
+2\s \> 11-16, 5\p\s    \\
+2NT \> 16-19, SBAL     \\
+3\c \> 13-16, (5)6\p\c \\
+3\d \> 13-16, (5)6\p\d \\
+3\h \> piduri küsimine \\
+3\s \> tugev, 6\p\s    \\
+3NT \> tugev, piduriga \\
+4\c \> 5\s 5\c         \\
+4\d \> 5\s 5\d
+\end{bidtable}
+
+
+\begin{bidtable}[(2\s\ preempt) - ?]
+\x  \> ?               \\
+2NT \> 16-19, SBAL     \\
+3\c \> 13-16, (5)6\p\c \\
+3\d \> 13-16, (5)6\p\d \\
+3\h \> 13-16, (5)6\p\h \\
+3\s \> piduri küsimine \\
+3NT \> tugev piduriga  \\
+4\c \> 5\h 5\c         \\
+4\d \> 5\h 5\d
+\end{bidtable}
+
+\subsection{3X preempt}
+
+\begin{bidtable}[(3\c\ preempt) - ?]
+\x   \> ?     \\
+3\d  \> ?     \\
+3\h  \> ?     \\
+3\s  \> ?     \\
+3NT  \> ?     \\
+4\c* \> 55 MM \\
+4\d* \> 5\d 5M
+\end{bidtable}
+
+\begin{bidtable}[(3\d\ preempt) - ?]
+\x   \> ?      \\
+2\s  \> ?      \\
+2NT  \> ?      \\
+3\c  \> ?      \\
+3\d  \> ?      \\
+3\h  \> ?      \\
+3\s  \> ?      \\
+3NT  \> ?      \\
+4\c* \> 5\c 5M \\
+4\d* \> 55 MM
+\end{bidtable}
+
+\begin{bidtable}[(3\h\ preempt) - ?]
+\x   \> ?       \\
+2\s  \> ?       \\
+2NT  \> ?       \\
+3\c  \> ?       \\
+3\d  \> ?       \\
+3\h  \> ?       \\
+3\s  \> ?       \\
+3NT  \> ?       \\
+4\c* \> 5\s 5\c \\
+4\d* \> 5\s 5\d \\
+4\h \> tugev, 5\s 5m \\
+4\s \> ? \\
+\end{bidtable}
+
+\begin{bidtable}[(3\s\ preempt) - ?]
+\x   \> ?       \\
+2NT  \> ?       \\
+3\c  \> ?       \\
+3\d  \> ?       \\
+3\h  \> ?       \\
+3\s  \> ?       \\
+3NT  \> ?       \\
+4\c* \> 5\h 5\c \\
+4\d* \> 5\h 5\d \\
+4\h  \> ?       \\
+4\s  \> tugev, 5\h 5m
+\end{bidtable}
+
+\newpage
+\section{Signaalid}
+\subsection{Itaalia}
+
+Meie kasutame trumbimängus.
+Äraviskel näitab:
+
+paaritu kaart (3, 5, 7, 9)	 sama masti (mida visati)
+
+väike paaris (üldiselt 2, 4)	 ülejäänud mastidest (mitte kuhu visati ja mida visati) madalam
+
+suur paaris (üldiselt 6, 8)	 ülejäänud mastidest kõrgem.
+
+Kui sa viskad ühest mastist ära 4 ja hiljem käid 2 (äraviskena või mastina),
+siis selgus, et 4 oli sul kõrgem paarisarvuline kaart ja eelistad kõrgemat
+masti. Mängides 2 ja siis 4, näitad madalama eelistust.
+
+\subsection{Lavinthal}
+
+Meie kasutame: trumbitas ja/või kui Itaaliat ei saa (või pole mõtet) kasutada, näiteks trumbita mängus ei taha sa kulutada kaarti oma pikast mastist, et partnerile öelda „käi mulle seda“.
+
+Äravisetel näitab:
+
+suur – väike ülejäänud mastidest kõrgemat
+
+väike – suur ülejäänud mastidest madalamat.
+
+Märkus: konventsioon küll eeldab 2 äraviset, kui aga kahte viset teha ei saa või ei jõua, võib ka vaid esimene juba piisavalt infot anda.
+
+\subsection{Väike julgustab}
+
+Kui partner käib välja ässa, siis: väikse kaardi viskamine julgustab partnerit seda masti jätkama, suure käimine „keelab“.
+
+\subsection{1., 3., 5.}
+
+Kasutatakse: kui partner käib välja K või kui pole oluline, millise klibaka käid (ka vastase mängitavas mastis). Käi väikseim kaart, mis on paarituarvulise järjekorranumbriga (nt kui on 4-ne mast, siis käi ülalt 3.) Järgmisena käi väikseim alles olev kaart. Seega väike-suur näitab paarituarvulist kaartide arvu, suur-väike paarisarvulist.
+
+\subsection{Avakäigud}
+Trumbita vastu 2/4.
+
+Trumbi vastu 1-3-5.
+
+Reast/sisereast ülemine. Välja arvatud, kui on A ja K, siis valid soovitud signaali järgi.
+
+% \setlength{\columnseprule}{0pt}
+\end{multicols*}
+\end{document}

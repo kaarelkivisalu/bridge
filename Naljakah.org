@@ -1,0 +1,1091 @@
+#+title: Naljakah
+#+author: Kaarel Kivisalu
+
+* Notation
+
+\begin{tabular}{l l}
+  (xxxx)       & suvaline mastide jaotus\\
+  xxxx         & täpne mastide jaotus\\
+  BAl          & ühtlane\\
+  SBAL         & poolühtlane või ühtlane\\
+  F1           & sundiv üheks ringiks\\
+  NF           & mittesundiv\\
+  GF           & geimini sundiv\\
+  F<pakkumine> & pakkumiseni sundiv\\
+  INV          & kutse\\
+  S/T          & slämmi proovimine\\
+  S/O          & sulgev\\
+  MIN          & miinimum\\
+  MAX          & maksimum\\
+  M            & !h\ või !s\\
+  MM           & kallismastid\\
+  m            & !c\ või !d\\
+  mm           & odavmastid\\
+  NV           &\\
+  VUL          &\\
+  P/C          & passi või paranda\\
+  DBL          & kontra\\
+  RDBL         & rekontra\\
+  RKCB         & Roman Key Card Blackwood 1430
+\end{tabular}
+
+* General principles
+
+- Esimesena naturaalselt pakutud mast on (vähemalt) 5-ne; muidu paku N, pärast võid ka 4-st masti pakkuda.
+- Teisena pakutud mast on (vähemalt) 4-ne.
+- Kahe 5-se masti korral paku kõrgemat (kallimat).
+- Kahe 4-se masti korral lähimat (mida saad madalamal pakkuda).
+- Vastaja pakutud uus mast on sundiv (F1) v.a juhul, kui ta jõud on ülalt piiratud (nt ta on passinud).
+- N pakkumine ei ole sundiv (kuid süsteemne kunstlik 2N tihti on sundiv).
+- Hüpe on alati nõrk ja tõkkeks, kui ta saab nõrk olla (on su esimene pakkumine või oled enne ainult passinud)
+- Hüpe on tugev (max, kui su jõud on limiteeritud, F1 kui ei ole), kui ta ei saa nõrk olla (oled juba mingeid punkte lubanud) või kui sinu ees on juba 2 passi järjest (siis pole mõtet tõkestada, sest su pass lõpetaks pakkumise).
+- Oma masti kordamine ei ole sundiv. Hüppega kordamine on sundiv.
+- Oma masti kordamine vabas positsioonis (partneri viimane pakkumine ei olnud sundiv või vastane pakkus vahele), GF olukorras või lähimast N pakkumisest kõrgemal lubab selle 1 võrra pikemaks.
+- Oma masti kordamine partneri sundiva pakkumise peale madalamal kui lähim N pakkumine ei luba masti pikemaks, vaid näitab nõrgemapoolset lehte (nt 1!h\ – 2!c\ – 2!h)
+- 4. masti sund: kui 3 masti on meie poolt naturaalselt pakutud, siis 4. pakkumine on kunstlik ja sunnib (GF).
+- Geimi pakkumine (3N, 4!h !s\ 5!c !d ) on üldjuhul sulgev.
+  Partneri masti toetamine geimist madalamal on tavaliselt kutsuv. See ei ole kutsuv partneri tõkkepakkumise peale (on tõkkeks) ja GF olukorras (kus see näitab kõvemat lehte, kui geimi hüppamine)
+
+* Openings
+
+1C = 16+ or 17+ BAL, F1
+1D = a) 11-15, with 6+!d, can have 5!s, 5!h or 6!c
+    b) \sth \ndh NV          14-16 BAL
+1HS = 11-15, 5+ suit
+1N = a) \sth \ndh NV          10,5-13, SBAL, 5M or 6m ok
+    b) \sth \ndh V, \rdh NV  14-16, SBAL, 5M or 6m ok
+    c) \rdh V, \thh          15-17, SBAL, 5M or 6m ok
+2C = 11-16, 6+!c or 5!c + 4M
+2D = 3-10, 44 MM
+2HS = 3-10, 5+ NV, 6+ VUL
+2N = 3-10, 55 mm
+3CDHS = 0-9, 6+ NV, 7+ VUL, 2-3-4 rule
+3N = Gambling 7+ m AKQ, no outside A/K
+4CDHS = 7+ NV, 8+ VUL, 2-3-4 rule
+
+\begin{tabular}{c|c|c}
+  1N & NV      & VUL\\
+  \hline
+  \sth & 10,5-13 & 14-16\\
+  \ndh & 10,5-13 & 14-16\\
+  \rdh & 14-16   & 15-17\\
+  \thh & 15-17   & 15-17\\
+\end{tabular}
+
+* Responses
+
+** 1!c
+
+1C-?
+1D = 0-7
+1HS2CD = 8+ , 5+ suit, GF
+1N = 8-11 või 14+ , GF
+    2C = Asks closest 4c suit
+        2DHS3C = 4+ cards
+2HS = 4-7, 6+ good suit (min QJxxxx)
+2N = 12-13, GF
+3CDHS = 8+, 4441, GF
+
+*** 1!c - 1!d
+
+1C-1D-?
+1H = 4+!h (if 4, (4441), (5440) or 5+ m), F1
+    1S = 4+!s
+        1N = 1444 likely, NF
+        2C = 4+!c, NF
+        2D = 4+!d, NF
+        2H = 6+!h
+        2S = 16-19, 3!s or 16-17, 4!s
+        2N = 21-22, likely 0-1!s
+        3C = 4!h 5!c, GF
+        3D = 4!h 5!d, GF
+        3H = Long good suit, INV
+        3S = 20-21, 3!s or 18-19, 4!s
+        3N = S/O
+        4C = 20+, 4+!s, splinter
+        4D = 20+, 4+!s, splinter
+        4H = S/O
+    1N = 0-5, NF
+        P = Typically 44(14)
+        2C = 4+!c, NF
+        2D = 4+!d, NF
+        2H = 6+!h
+        2S = 21+, 5!h 4!s, F1
+        2N = 22-23, INV
+        3C = 4!h 5!c, GF
+        3D = 4!h 5!d, GF
+        3H = Long good suit, INV
+        3S = 20-21, 3!h or 18-19, 4!h
+        3N = S/O
+        4H = S/O
+    2C = 6-7, 0-2!h, F1
+        2D = non-GF, waiting
+            2H = 2!h
+            2S = 3!s
+            2N = 6-7, BAL
+            3C = 5+!c
+            3D = 5+!d
+        2H = 6+!h, NF
+        2S = 21+, 5!h 4!s
+        2N = no 5+ suit, GF
+        3C = 4!h 6!c, GF
+        3D = 4!h 6!c, GF
+        3H = Sets as trumps
+    2D = 5-7, 3!h, F1
+        2H = S/O
+        2S = 4+!s
+        2N = GF
+        3C = 4!h 6!c, GF
+        3D = 4!h 6!d, GF
+        3H = 5+!h, INV
+        3N = S/O
+    2H = 0-4, 4-5!h, NF (system on)
+    2S = 4-6, great 6+!s, NF
+    2N = 5-7, 4!h, mini-splinter
+        3C = Asks, GF
+        3H = S/O
+        4H = S/O
+    3C = 4-6, great 6+!c, NF
+    3D = 4-6, great 6+!d, NF
+    3H = 5-7, 4!h, BAL, INV
+    3S = 6-7, 5!h, singleton or void
+    4C = 6-7, 5!h, singleton or void
+    4D = 6-7, 5!h, singleton or void
+1S = 4+!s (if 4, (4441), (5440) or 5+ m), F1
+    1N = 0-5, NF
+        P = Typically 44(14)
+        2C = 4+!c, NF
+        2D = 4+!d, NF
+        2H = 21+, 5!s 4!h, F1
+        2S = 6+!s
+        2N = 22-23, INV
+        3C = 4!s 5!c, GF
+        3D = 4!s 5!d, GF
+        3H = Long good suit, INV
+        3S = 20-21, 3!s or 18-19, 4!s
+        3N = S/O
+        4H = S/O
+    2C = 6-7, 0-2!s, F1
+        2D = non-GF, waiting
+            2H = 4!h
+            2S = 2!s
+            2N = 6-7, BAL
+            3C = 5+!c
+            3D = 5+!d
+        2H = 5!s 4!h, MIN
+        2S = 6!s, NF
+        2N = no 5+ suit, GF
+        3C = 4!s 6!c, GF
+        3D = 4!s 6!c, GF
+        3S = Sets as trumps
+    2D = 5-7, 3!s, F1
+        2H = 4!h
+        2S = S/O
+        2N = GF
+        3C = 4!s 6!c, GF
+        3D = 4!s 6!d, GF
+        3S = 5!s, INV
+        3N = S/O
+    2H = 6-7, 5!h, 0-2!s
+    2S = 0-4, 4-5!s, NF (system on)
+    2N = 5-7, 4!s, mini-splinter
+        3C = Asks, GF
+        3S = S/O
+        4S = S/O
+    3C = 4-6, great 6+!c, NF
+    3D = 4-6, great 6+!d, NF
+    3D = 4-6, great 6+!h, NF
+    3S = 5-7, 4!s, BAL, INV
+    4C = 6-7, 5!s, singleton or void
+    4D = 6-7, 5!s, singleton or void
+    4H = 6-7, 5!s, singleton or void
+1N = 17-19(18-20), BAL (system on)
+2C = No 4+ M, 5+!c, NF
+2D = No 4+ M, 5+!d, NF
+2H = Kokish, F1 if BAL, else GF
+     2S = Forced
+          2N = 22-24(23-24), BAL
+          3C = 5+!h 4+!c
+          3D = 5+!h 4+!d
+          3H = 6+!h
+          3S = 4!s 5+!h
+2S = 5+ 5+ mm, F1
+2N = 20-21(21-22), BAL (system on)
+3C = 5+!c, may have major, GF
+3D = 5+!d, no major, GF
+3H = 4!h 5+!d, GF
+3S = 4!s 5+!d, GF
+3N = 25-26, BAL
+4N = 27-29, BAL
+5N = 30-32, BAL
+6N = 33-36, BAL
+
+** 1!d
+
+1H = 6+, 4+ suit, F1
+1S = 6+, 4+ suit, F1
+1N = (6)7-11\m, BAL, no 4M, NF
+2C = 11+, (4)5+!c, no major unless GF and 6+!c, F1
+2D = 11+, (4)5+!d, no major unless GF and 6+!d, F1
+2H = 10\m, 5+!s 4+!h
+2S = 11+, 5+!s 4+!h, INV opposite 11-13 BAL
+2N = 11+-13, BAL, no 4M, INV
+3C = Pre/Mix, 5+ 5+ mm, P/C
+3D = 6+!d, preemptive
+3H = 6+!h, preemptive
+3S = 6+!s, preemptive
+3N = 13-15, BAL, no 4M, S/O
+4C = 6+ 5+ mm, P/C
+4D = 7+!d, preemptive
+4H = 7+!h, S/O
+4S = 7+!s, S/O
+4N = Gerber
+
+1D-1H-?
+1S = 4!s, other bids deny 4!s
+    1N = Nat, no game, S/O
+    2C = GF
+        2D = 5+!d, 2\m!h
+        2H = 3!h
+            2S = Relay, denies 4!s
+                2N = BAL
+                    3C = Relay
+                        3D = 4324
+                        3H = 4342
+                        3S = 4333, MIN
+                        3N = 4333, MAX
+                    3C = 4351
+                    3D = 4360
+            2N = Relay, shows 4!s
+                3C = BAL
+                    3D = Relay
+                        3H = 4324
+                        3S = 4342
+                        3N = 4333
+                    3H = Sets !h
+                3D = 4351
+                3H = 4360
+        2S = 5!s 6!d
+        2N = 2!h, BAL (4234, 4243, 4144)
+            3C = Relay
+                3D = 4234
+                3H = 4243
+                3S = 4144, MIN
+                3N = 4144, MAX
+        3C = ?
+        3D = Solid 6+!d
+    2D = 4!s or 5!h, INV, F1
+        2H = 2-3!h, MIN
+            2S = 4!s, INV
+        2S = 0-1!h, MIN
+        2N = 0-1!h, MAX
+        3C = ?
+        3D = ?
+        3H = 3!h, MAX
+        3S = 5!s 6!d
+        3N = 3!h, !c stop, MAX
+    2H = 6+!h, NF
+    2S = 7-10, 4!s, NF
+    2N = 11-12, BAL, NF
+    3C = 4!h 5+!c, INV
+    3D = 4!h 5+!d, INV
+    3H = GF, ST
+    3S = GF, ST
+    3N = S/O
+    4C = 4!s, splinter, GF
+    4D = 4!s, splinter, GF
+    4H = S/O
+    4S = S/O
+1N = 11-13(14), no singleton, BAL
+    2C = Relay to 2!d (to play, INV or ST)
+        2D = Forced
+            2H = 5+!h, INV
+            2S = 1444, INV+
+                2N = MIN
+                3C = 4+!c, MIN
+                3D = 4+!d, MIN
+                3H = 4+!c, MAX
+                3S = 4+!d, MAX
+                3N = No fit, MAX
+            2N = INV, BAL
+            3C = 5!h 5+!c, INV
+            3D = 5!h, 5+!d, INV
+            3H = 6+!h, strong INV
+            3S = 0-1!s
+            3N = 5!h, COG (choice of games)
+            4C = 0-1!c
+            4D = 0!d
+            4H = 0!h
+    2D = GF
+        2H = 3!h, no 5m
+        2S = 0-2!h, some 5m
+            2N = Asks
+                3C = 5!c
+                3D = 5!d
+        2N = 0-2!h, no 5m
+        3C = 3!h, 5!c
+        3D = 3!h, 5!d
+    2H = (5)6+!h, S/O
+    2S = Some canape INV+
+        2N = Forced
+            3C = 4!h (5)6+!c, INV
+            3D = 4!h (5)6+!d, INV
+            3H = 4!h 5!c, GF
+            3S = 4!h 5!d, GF
+    2N = Transfer to !c
+        3C = Forced
+            P = 6+!c, to play
+    3C = 5+!h 5+!c, ST
+    3D = 5+!h 5+!d, ST
+    3H = 5+!h 5+!h, ST
+    3S = 5+!h 5+!d, ST
+    3N = S/O
+    4C = RKCB in !h
+    4D = 1!d (with void 2!c)
+    4H = S/O
+2C = 54+ mm, not 6!d 4!c
+    2D = 3+!d, S/O
+    2H = 6!h, S/O
+    2S = GF
+        2N = 31(54)
+            3C = 4!c
+                3D = 4!c
+                other = 5!c
+            3D = 4!d
+                3H = 4!c
+                other = 5!c
+            3C = 55 mm
+            3D = 22(54)
+                3H = Asks !h Jx or more
+                    other = Yes
+                    3N = No
+                3S = Asks !s Qx or more
+                    3N = Yes
+                    other = No
+            3H = 1345, Mulberry
+            3S = 1354, Mulberry
+            3N = 0355, MIN, Mulberry
+            4C = 0355, MAX, mod Mulberry
+    2N = INV
+    3C = 4+!c, INV
+    3D = 4+!d, INV
+    3H = 6+!h, INV
+    3S = ?
+    3N = S/O
+    4H = 6+!h, S/O
+2D = 6+!d, MIN
+    2H = 6!h, NF
+    2S = GF
+        2N = 3161, 2263, 3262
+        3C = 6!d 4!c
+        3D = 7!d
+        3H = 3!h
+    2N = INV
+    3D = 2+!d, INV
+2H = 4!h
+    2S = Asks
+        2N = 3433
+        3C = 5!c
+        3D = 5!d
+        3H = MIN
+        3S = 4!h 6!d, MIN
+        3N = 2452
+        4C = 4441
+        4H = 1444
+        4S = BAL, MAX
+2S = a) 5!s 6+!d with extras, F1
+    b) 13-15, 3+!h, some splinter
+    2N = Asks and shows some values
+        3C = Low (!c) splinter
+        3D = 5!s 6+!d
+        3H = High (!s) splinter
+    3C = ?
+    3D = Bad hand, pass or correct to 3!h
+    3H = GF, 6+!h
+2N = 13-15, 3!h 6+!d, F1
+3C = 13-15, 55 mm, NF
+3D = 13-15, 2\m!h 6+!d
+3H = 4!h, stronger than 2!s, some short, MAX
+    3S = Asks
+        3N, = !c splinter
+        4C, = !s splinter
+3S = 4!h, some void (3N asks LH), MAX
+    3N = Asks
+        4C, = !c void
+        4D, = !s void
+3N = Offer to play with good long diamond, usually 7
+4C = 2461
+4D = 1462
+4H = 5!h 6!d
+
+1D-1S-?
+1N  11-13(14), = no singleton, BAL
+    2C = Relay to 2!d (to play, INV or ST)
+        2D = Forced
+            2H = 4144, INV+
+                2N = MIN
+                3C = 4+!c, MIN
+                3D = 4+!d, MIN
+                3H = 4+!c, MAX
+                3S = 4+!d, MAX
+                3N = No fit, MAX
+            2S = 5+!s, INV
+            2N = INV, BAL
+            3C = 5!s 5+!c, INV
+            3D = 5!s, 5+!d, INV
+            3H = 55 MM, strong INV w/good !h
+            3S = 6+!s, strong INV
+            3N = 5!s, COG (choice of games)
+            4C = 0-1!c
+            4D = 0!d
+            4H = 0!h
+    2D = GF
+        2H = 3!s, no 5m
+        2S = 0-2!s, some 5m
+            2N = Asks
+                3C = 5!c
+                3D = 5!d
+        2N = 0-2!s, no 5m
+        3C = 3!s, 5!c
+        3D = 3!s, 5!d
+    2H = Some canape INV+
+        2S = HHx !s support
+        2N = Less than HHx !s support
+            3C = 4!s (5)6+!c, INV
+            3D = 4!s (5)6+!d, INV
+            3H = 4!s 5!c, GF
+            3S = 4!s 5!d, GF
+    2S = (5)6+!s, S/O
+    2N = Transfer to !c
+        3C = Forced
+            P = 6+!c, to play
+    3C = 5+!s 5+!c, ST
+    3D = 5+!s 5+!d, ST
+    3H = 5+!s 5+!h, ST
+    3S = 5+!s 5+!d, ST
+    3N = S/O
+    4C = RKCB in !s
+    4D = 1!d (with void 2!c)
+    4H = 1!h (with void 2!c)
+    4S = S/O
+2C = Natural, can be 1444 or 1453, not 6!d 4!c
+    2D = 3+!d, S/O
+    2H = GF
+        2S = a) 1444
+            b) = 1453
+            c) = 3!s
+            2N = Asks
+                3C = Not 3!s
+                    3D = Asks
+                        3H = 1444, Mulberry
+                        3S = 1435, Mulberry
+                        3N = 1453, Mulberry
+                    3H = Sets !h
+                3D = 3154, MIN, Mulberry
+                3H = 3154, MAX, Mulberry
+                3S = 3055, MIN, Mulberry
+                3N = 3055, MAX, Mulberry
+        2N = 13(54)
+            3C = 4!c
+                3D = 4!c
+                other = 5!c
+            3D = 4!d
+                3H = 4!d
+                other = 5!d
+        3C = 55 mm
+        3D = 22(54)
+            3H = Asks !h Qx or more
+                3N = Yes
+            3S = Asks !h Jx or more
+                3N = No
+        3H = ?
+        3S = 0454, MIN, Mulberry
+        3N = 0454, MAX, Mulberry
+    2S = 6+!s, S/O
+    2N = 9-12, INV
+    3C = 4+!c, INV
+    3D = 4+!d, INV
+    3H = 5!s 5!h, GF
+    3S = 6+!s, INV
+    3N = S/O
+    4S = 6+!s, S/O
+2D = 6+!d, MIN
+    2H = GF
+        2S = 3!s
+        2N = 1361, 2263, 2362
+        3C = 6!d 4!c
+        3D = 7!d
+    2S = 6+!s, NF
+    2N = INV
+    3D = INV
+2H = a) 4!s, not MIN, some short
+    b) 5!h 6!d, MIN
+    2S = S/O
+    2N = Asks and shows some values
+        3C = Low (!c) splinter
+        3D = Middle (!d) splinter
+        3H = High (!h) splinter
+2S = 11-12, 4!s (unless 3451), BAL or MIN
+    2N = Asks
+        3C = 4351
+        3D = 3451
+        3H = 4153
+        3S = MIN
+        3N = 4!s 6!d, MIN
+        4C = 4252
+        4D = 4441
+        4H = 4144
+        4S = BAL, MAX
+    3C = 5+!c, INV
+    3D = 5+!d, INV
+    3H = 5+!h, INV
+    3S = INV
+    3N = S/O
+    4C = Splinter, ST
+    4D = Splinter, ST
+    4H = Splinter, ST
+    4S = S/O
+2N = 13-15, 3!s 6+!d, F1
+3C = 13-15, 55 mm, NF
+3D = 13-15, 2\m!s 6+!d
+3H = 5!h 6!d, MAX
+3S = 4!s, some short, MAX
+3N = Offer to play with good long diamond usually 7
+4C = 4!s, some void
+4D = 4!s, 1!d
+4H = 4!s, 1!h
+4S = 5!s 6!d
+
+** 1!h
+
+1S = 4+!s, F1
+1N = Semi-forcing
+2C = 2+!c, GF
+2D = 5+!d, GF
+2H = 7-11, 3+!h, NF
+2S = 6-10, 5+!s, NF
+2N = 10+, (3)4+!h, INV+
+3C = 5+!c, INV
+3D = 5+!d, INV
+3H = 7-9, 4+!h
+3S = 3+!h, 0!s, GF
+3N = (4333) choice of games
+4C = 3+!h, 0!c, GF
+4D = 3+!h, 0!d, GF
+4H = S/O
+4S = RCKB in !h
+4N = Gerber
+
+1H-1S-?
+1N = Nat
+    2C = 10-12, Forces 2!d, INV
+         2D = Forced
+            2H = 3+!h, INV
+             2S = 5!s, INV
+             2N = Nat, INV
+    2D = 13+, GF
+         2H = Strong suit (2 of AKQ), 2\m!s
+         2S = 3!s
+         2N = Neither
+    2H = S/O
+    2S = S/O
+    2N = ? (relay to 3!c)
+    3C = 5+!c, GF
+    3D = 5+!d, GF
+    3H = 3+!h, ST
+    3S = 5+!s, ST
+2C = 4+!c, NF
+    2D = 5+!d, NF
+    2H = S/O
+    2S = Ask distrib, GF
+         2N = 2!s
+             3S = 5!s, NF
+             3N = S/O
+             4S = 6!s, NF
+         3C = 1534
+         3D = 0544
+         3H = 6!h 4!c
+         3S = 3505
+         3N = 3514
+    2N = S/O
+    3S = 6+!s, INV
+    3N = S/O
+2D = 4+!d
+    2H = S/O
+    2S = Ask distrib, GF
+         2N = 2!s
+             3S = 5!s, NF
+             3N = S/O
+             4S = 6!s, NF
+         3C = 1543
+         3D = 0544
+         3H = 6!h 4!d
+         3S = 3550
+         3N = 3541
+    2N = S/O
+    3S = 6+!s, INV
+    3N = S/O
+2H = BAL
+    2S = Ask distrib, GF
+         2N = 2533
+         3C = 5!h + a minor
+         3D = 4522
+         3H = 6+!h
+             3S = Asks
+                 3N
+                 4C
+                 4D
+                 4H
+                 4H
+         3S = 3622
+    2N = Nat, INV
+    3C = 5+!c, INV
+    3D = 5+!d, INV
+    3H = 3+!h, INV
+    3S = 5+!s, INV
+2S = 4+!s, or 3!s with weak m
+    2N = Asks
+         3C = 3!s, (could be 35(32)), MIN
+         3D = 3!s, UNBAL, MAX
+         3H = 4!s, MIN
+         3S = 4!s, MAX
+         3N = 4522, MAX and ?
+         4C = Splinter, solid 6+!h
+         4D = Splinter, solid,6+!h
+    3C = 3+!h, F1
+         3D = MIN
+         3H = MAX
+    3D = 4!s, F1
+         3H = MIN
+         3S = MAX
+    3H = 2!h, 4!s, NF
+    3S = 0-1!h, 4!s, NF
+    3N = 3!h, BAL, NF
+    4H = S/O
+    4S = S/O
+2N = ?
+3C = 5!h 5!c, extras, NF
+    3D = NF
+    3H = NF
+    3S = F1
+    4C = F1
+    4D = RKCB in !c
+    4S = RKCB in !h
+3D = 5!h 5!d, extras, NF
+    3H = NF
+    3S = F1
+    4C = RKCB in !c
+    4D = F1
+    4S = RKCB in !h
+3H
+3S
+3N = 4!s7!h
+
+** 1!s
+
+1S-?
+1N = Semi-forcing
+2C = 2+!c, GF
+2D = 5+!d, GF
+2H = 6-10, 5+!h, NF
+2S = 7-11, 3+!s, NF
+2N = 10+, (3)4+!s, INV+
+3C = 5+!c, INV
+3D = 5+!d, INV
+3H = 7-9, 4+!s
+3D = 5+!h, INV
+3N = (4333) choice of games
+4C = 3+!h, 0!c, GF
+4D = 3+!h, 0!d, GF
+4H = 3+!h, 0!h, GF
+4S = RCKB in !s
+4N = Gerber
+
+** 1NT
+
+1N-?
+2C = a) weak 4441/4351/3451/3442
+    b) very weak with good distribution
+    c) INV, 5!s 4!h
+    d) GF, 4+ M või 54MM
+2D = TRF to !h
+2H = TRF to !s
+2S = a) TRF to !c
+    b) Asks strength
+2N = TRF to !d
+3C = 54 mm, NF
+3D = 54 mm, GF
+3H = 31(54), GF
+3S = 13(54), GF
+3N = S/O, no 4M
+4C = Gerber
+4D = TRF to !h, 6+!h
+4H = TRF to !s, 6+!s
+
+1N-2C-?
+2D = no 4+ M
+    2H = weak, 4+ 4+ MM, NF
+    2S = 5!s 4!h, INV
+    2N = INV
+    3C = (5)6+!c, GF
+    3D = (5)6+!d, GF
+    3H = 5!s 4!h, GF
+        3N = 2!s
+        4S = 3!s
+    3S = 4!s 5!h, GF
+        3N = 2!h
+        4H = 3!h
+    3N = S/O
+    4C = 4!s 6!h, ST
+    4D = 6!s, 4!h, ST
+    4H = 4!s, 6!s, S/O
+    4S = 6!s, 4!h, S/O
+    4N = INV to 6N
+2H = 4+!h
+    2S = 5!s 4!h, INV
+    2N = 3\m!h, INV
+    3C = (5)6+!c, GF
+    3D = (5)6+!d, GF
+    3H = 4!h, INV
+    3S = 5!s 4!h, GF
+    3N = S/O
+    4D = RKCB in !h
+    4H = S/O
+    4S = S/O
+2S = 4+!s, no 4+!h
+    2N = 3\m!s, INV
+    3C = (5)6+!c, GF
+    3D = (5)6+!d, GF
+    3H = 4!s 5!h, GF
+    3S = 4!s, INV
+    3N = S/O
+    4D = RKCB in !h
+    4H = S/O
+    4S = S/O
+
+1N-2D-2H-?
+2S = 4!s = 5!h, INV
+2N = 5!h, SBAL, INV
+3C = 4+!c, GF
+3D = 4+!d, GF
+3H = (5)6+!h, INV
+3S = Autosplinter
+3N = 5!h, SBAL, P/C
+4C = Autosplinter
+4D = Autosplinter
+4H = 6+!h, ST
+
+1N-2H-2S-?
+2N = 5!s, SBAL, INV
+3C = 4+!c, GF
+3D = 4+!d, GF
+3H = 5+!h, GF
+3S = (5)6+!s, INV
+3N = 5!s, SBAL, P/C
+4C = Autosplinter
+4D = Autosplinter
+4H = Autosplinter
+4S = 6+!s, ST
+
+1N-2S-?
+2N = MIN
+    P = INV
+    3C = Clubs
+3C = MAX
+    P = Clubs
+    3N = INV
+
+** 2!c
+
+2C-?
+2D = 10+, 4+ M or 13+, 5+ mast
+    2HS = 4 card suit
+        3DHS = 12+, 5+ suit, GF
+    2N = 14-15, no 4M, GF
+        3DHS = 12+, 5+ suit, GF
+    3C = 11-13, no 4M
+        3DHS = 12+, 5+ suit, GF
+    3DHS = 14-15, 6+!c ja 4+ card suit, GF
+        3HS = 12+, 5+ suit
+2HS = 7-11, 5+ suit, NF
+2N = 9-11, no 4M, 2\m!c , INV
+3C = 5-8, 3+!c
+4C = 9-11, no 4M, 3+!c , INV
+3N = 12+, no 4M
+
+** 2!d
+
+2D-?
+P = 6+!d, no interest in majors
+2HS = Better major, S/O
+2N = 15+ , asks
+    3C = (1. step) 3-7, !h better
+    3D = (2. step) 3-7, !s better
+    3H = (3. step) 8-10, !h better
+    3S = (4. step) 8-10, !s better
+3CD = 15+ , 6+ mast, F1
+
+** 2!h
+
+2H-?
+2S3CD = 15+, 5+ card good suit, F1
+2N = 15+, asks
+    3C = (1. step) 3-7, bad suit
+    3D = (2. step) 3-7, good suit
+    3H = (3. step) 8-10, bad suit
+    3S = (4. step) 8-10, good suit
+3H = 0-14, 3+!h, preempt
+4H = S/O
+
+** 2!s
+
+3CDH = 15+, 5+ card good suit, F1
+2N = 15+, asks
+    3C = (1. step) 3-7, bad suit
+    3D = (2. step) 3-7, good suit
+    3H = (3. step) 8-10, bad suit
+    3S = (4. step) 8-10, good suit
+3S = 0-14 , 3+!s, preempt
+4S = S/O
+
+** 2NT
+
+2N-?
+3CD = 0-16, S/O
+4CD = 17-20, 3+ suit, INV
+5CD = 21+, 3+ suit, S/O
+P = 12-19, stoppers in majors, no support
+3N = 20+, stoppers in majors
+
+** 3NT
+
+3N-?
+P = Stoppers in all suits
+4C = P/C
+4D = Asks shortness
+    4H = splinter
+    4S = splinter
+    4N = 7222
+    5C = 7+!c , 0-1!d
+    5D = 7+!d , 0-1!c
+5C = P/C
+5D = S/O
+
+* Competitive bidding
+
+** 1!c
+
+1C-(D)-?
+P = 0-5, any or trap
+1D = 6-7, any, sys on
+R = GF, no good bid
+1H = 8+, 5+!h, GF
+1S = 8+, 5+!s, GF
+1N = 8-11 or 14+, BAL, GF
+2C = 8+, 5+!c, GF
+2D = 8+, 5+!d, GF
+2N = 12-13, BAL
+3X = 7+ suit, NF
+
+1C-(bid)-?
+P = 0-5, any or trap
+D = 6-7, any, sys on, F2!s
+New suit = 8+, 5+ suit, GF
+Cheapest N = 8-11 or 14+
+Jump in N = 12-13, BAL, GF
+Cue = a) 8+, BAL, no stop (2 level)
+    b) 8+, BAL, 3-suited (3 level)
+Jump Cue = 4441, short in bid suit
+3X (over 1X) = 7+ suit, NF
+
+Over 2!s or higher, Dbl includes 8+ with no convenient bid. (Then 2N=F1)
+
+Over 3 any or higher any positive action is GF.
+
+
+1C-(P)-bid-(bid)-?
+D = T/O if suit not shown
+Opener's cue = Michaels
+Opener's jump cue = Nat
+
+** 1!d
+
+1D-(D)-?
+R = INV+
+1H = 4+!h
+1S = 4+!s
+1N = 5-8, to play
+2C = TRF to !d
+2D = TRF to !h
+2H = TRF to !s
+2S = TRF to !c
+2N = 11+, 5+!d
+3C = 0-10, 54+ mm
+3X = 6+ suit, INV
+
+** 1N
+
+System on over non-penalty doubles (any meaning) or 2!c (any meaning except majors).
+
+Over penalty doubles we play Meckwell Escapes.
+
+1N-(D penalty)-?
+P = To play
+R = m or MM
+     2C = Forced
+         P 5+!c
+         2D = 5+!d
+         2H = 4+4+ MM, P/C
+2C = !c + higher
+2D = !d + higher
+2H = 5+!h
+2S = 5+!s
+2N = GF
+3X = 6+ suit, INV
+3N = S/O
+
+* Defensive bidding
+
+** Overcalls
+
+*** Simple Overcalls
+
+1X = 8-16, 5+ suit
+2X = 10-16, 5+ suit
+3X = 12-16, (5)6+ suit
+
+** Cuebids
+
+Cuebid - A forcing bid in a suit which bidder does not wish to play.
+
+*** Michaels cuebid
+
+(1C)
+    2C = 5+!s 5+!h
+(1D)
+    2D = 5+!s 5+!h
+(1D precision)
+    2H = 5+!s 5+!h
+(1H)
+    2H = 5+!s 5+m
+(1S)
+    2S = 5+!h 5+m
+
+** 1!c
+
+*** Strong
+
+(1C)-?
+X = Majors
+1N = Minors
+
+(1C)-P-(1D)-?
+X = Majors
+1N = Minors
+
+** 1N
+
+Over 1N we play Multi-Landy (Woolsey).
+
+Weak range includes 12 points. 13-15 or better is strong, 12+-15 is weak.
+
+(1N) - ?
+D = Vs strong, by PH or \thh hand: 4M 5+ m
+    Vs weak: Penalty, 14+
+2C = 44+ MM
+2D = 5+ M
+2H = 5!h 4+ m
+2S = 5!s 4+ m
+2N = 55 mm
+
+** 2N
+
+(2N minors)-?
+D = penalty intrest for at least 1 minor
+3C = majors, !h better
+3D = majors, !s better
+
+** 2 minor
+
+(2CDH majors)-?
+X   vähemalt üks 4+ M
+D = 4+ M
+2H = minors, !c better
+2S = minors, !d better
+
+** 3X preempt
+
+(3C)-?
+4C = 55 MM
+4D = 5!d 5M
+
+(3D)-?
+4C = 5!c 5M
+4D = 55 MM
+
+(3H)-?
+4C = 5!s 5!c
+4D = 5!s 5!d
+4H = Strong, 5!s 5m
+
+(3S)-?
+4C = 5!h 5!c
+4D = 5!h 5!d
+4H = Strong, 5!h 5m
+* Slam bidding
+** Kickback Roman Keycard Blackwood
+
+Without Kickback (keycards are Aces and trump K):
+
+4N = RKC
+    5C = 1/4 keycards
+    5D = 0/3 keycards
+    5H = 2 keycard, no trump Q
+    5S = 2 keycard, trump Q
+
+With Kickback (X are trumps):
+
+4X+1 = KRCK
+    4X+2 = 1/4 keycards
+    4X+3 = 0/3 keycards
+    4X+4 = 2 keycard, no trump Q
+    4x+5 = 2 keycard, trump Q
+
+Next step queries trump queen (if not known):
+
+Y = Queen asks
+    Y+1 = No trump Q
+    Y+2 = Trump Q
+
+Next step queries #kings (then #queens, ...):
+
+Z = #Kings ask
+    Z+1 = 0/3 kings
+    Z+2 = 1/4 kings
+    Z+2 = 2 kings
+
+*** Is it Kickback?
+
+The answer is that if a 4-level jump bid could be construed as Kickback, and
+there is any way to bid that suit naturally and forcing below game, then it is
+Kickback.
+
+If there are two suits, then the cheapest "impossible" bid is Kickback for the
+lower suit and the next "impossible" bis is Kickback for the higher suit.
+
+** Serious 3NT and Last Train
+
+When a major suit is trumps and slam is not yet ruled out, 3NT is not natural, but rather a waiting bid that shows a good hand in context. If you bybass 3NT, you deny a good hand in context.
+
+The bid one under 4 of the major also shows a good hand in context, and nothing about the cue-bid suit.
+
+Example:
+
+1H-2C-2H-3H
+3S = Cue-bid, does not say whether serious or not
+3N = Serious 3NT (13-15 as 1!h was good 10-15), denies a spade cue
+4C = Cue-bid, non-serious hand (good 10-12), denies a space cue, min but not the pits
+4D = Last Train, non-serious hand (good 10-12), no spade or club cue
+4H = The worst hand (10-11), bad distribution, honor location and slam cards
+
+** Lackwood

@@ -224,336 +224,131 @@
 
 1H = 6+, 4+ suit, F1
 1S = 6+, 4+ suit, F1
-1N = (6)7-11\m, BAL, no 4M, NF
+1N = 7-11\m, BAL, no 4M, NF
 2C = 11+, (4)5+!c, no major unless GF and 6+!c, F1
 2D = 11+, (4)5+!d, no major unless GF and 6+!d, F1
-2H = 10\m, 5+!s 4+!h
-2S = 11+, 5+!s 4+!h, INV opposite 11-13 BAL
+2H = 10\m, 5!s 4-5!h
+2S = 11+, 5!s 4-5!h, INV opposite 11-13 BAL
 2N = 11+-13, BAL, no 4M, INV
-3C = Pre/Mix, 5+ 5+ mm, P/C
+3C = 6-10, Pre/Mix, 54 mm, P/C
 3D = 6+!d, preemptive
 3H = 6+!h, preemptive
 3S = 6+!s, preemptive
-3N = 13-15, BAL, no 4M, S/O
-4C = 6+ 5+ mm, P/C
+3N = 13-16, BAL, no 4M, S/O
+4C = 6-10, 55+ mm, P/C
 4D = 7+!d, preemptive
 4H = 7+!h, S/O
 4S = 7+!s, S/O
-4N = Gerber
+5C = 7+!c, S/O
 
 1D-1H-?
 1S = 4!s, other bids deny 4!s
-    1N = Nat, no game, S/O
-    2C = GF
-        2D = 5+!d, 2\m!h
-        2H = 3!h
-            2S = Relay, denies 4!s
-                2N = BAL
-                    3C = Relay
-                        3D = 4324
-                        3H = 4342
-                        3S = 4333, MIN
-                        3N = 4333, MAX
-                    3C = 4351
-                    3D = 4360
-            2N = Relay, shows 4!s
-                3C = BAL
-                    3D = Relay
-                        3H = 4324
-                        3S = 4342
-                        3N = 4333
-                    3H = Sets !h
-                3D = 4351
-                3H = 4360
-        2S = 5!s 6!d
-        2N = 2!h, BAL (4234, 4243, 4144)
-            3C = Relay
-                3D = 4234
-                3H = 4243
-                3S = 4144, MIN
-                3N = 4144, MAX
-        3C = ?
-        3D = Solid 6+!d
-    2D = 4!s or 5!h, INV, F1
-        2H = 2-3!h, MIN
-            2S = 4!s, INV
-        2S = 0-1!h, MIN
-        2N = 0-1!h, MAX
-        3C = ?
-        3D = ?
-        3H = 3!h, MAX
-        3S = 5!s 6!d
-        3N = 3!h, !c stop, MAX
-    2H = 6+!h, NF
-    2S = 7-10, 4!s, NF
-    2N = 11-12, BAL, NF
-    3C = 4!h 5+!c, INV
-    3D = 4!h 5+!d, INV
-    3H = GF, ST
-    3S = GF, ST
-    3N = S/O
-    4C = 4!s, splinter, GF
-    4D = 4!s, splinter, GF
-    4H = S/O
-    4S = S/O
 1N = 11-13(14), no singleton, BAL
-    2C = Relay to 2!d (to play, INV or ST)
-        2D = Forced
-            2H = 5+!h, INV
-            2S = 1444, INV+
-                2N = MIN
-                3C = 4+!c, MIN
-                3D = 4+!d, MIN
-                3H = 4+!c, MAX
-                3S = 4+!d, MAX
-                3N = No fit, MAX
-            2N = INV, BAL
-            3C = 5!h 5+!c, INV
-            3D = 5!h, 5+!d, INV
-            3H = 6+!h, strong INV
-            3S = 0-1!s
-            3N = 5!h, COG (choice of games)
-            4C = 0-1!c
-            4D = 0!d
-            4H = 0!h
+    2C = Puppet to 2!d (to play or INV)
     2D = GF
-        2H = 3!h, no 5m
-        2S = 0-2!h, some 5m
-            2N = Asks
-                3C = 5!c
-                3D = 5!d
-        2N = 0-2!h, no 5m
-        3C = 3!h, 5!c
-        3D = 3!h, 5!d
-    2H = (5)6+!h, S/O
-    2S = Some canape INV+
-        2N = Forced
-            3C = 4!h (5)6+!c, INV
-            3D = 4!h (5)6+!d, INV
-            3H = 4!h 5!c, GF
-            3S = 4!h 5!d, GF
-    2N = Transfer to !c
-        3C = Forced
-            P = 6+!c, to play
-    3C = 5+!h 5+!c, ST
-    3D = 5+!h 5+!d, ST
-    3H = 5+!h 5+!h, ST
-    3S = 5+!h 5+!d, ST
-    3N = S/O
-    4C = RKCB in !h
-    4D = 1!d (with void 2!c)
-    4H = S/O
-2C = 54+ mm, not 6!d 4!c
-    2D = 3+!d, S/O
-    2H = 6!h, S/O
-    2S = GF
-        2N = 31(54)
-            3C = 4!c
-                3D = 4!c
-                other = 5!c
-            3D = 4!d
-                3H = 4!c
-                other = 5!c
-            3C = 55 mm
-            3D = 22(54)
-                3H = Asks !h Jx or more
-                    other = Yes
-                    3N = No
-                3S = Asks !s Qx or more
-                    3N = Yes
-                    other = No
-            3H = 1345, Mulberry
-            3S = 1354, Mulberry
-            3N = 0355, MIN, Mulberry
-            4C = 0355, MAX, mod Mulberry
-    2N = INV
-    3C = 4+!c, INV
-    3D = 4+!d, INV
-    3H = 6+!h, INV
-    3S = ?
-    3N = S/O
-    4H = 6+!h, S/O
-2D = 6+!d, MIN
-    2H = 6!h, NF
-    2S = GF
-        2N = 3161, 2263, 3262
-        3C = 6!d 4!c
-        3D = 7!d
-        3H = 3!h
-    2N = INV
-    3D = 2+!d, INV
+2C = 8+ cards in the minors, not 6!d 4!c
+2D = 6+!d
 2H = 4!h
-    2S = Asks
-        2N = 3433
-        3C = 5!c
-        3D = 5!d
-        3H = MIN
-        3S = 4!h 6!d, MIN
-        3N = 2452
-        4C = 4441
-        4H = 1444
-        4S = BAL, MAX
-2S = a) 5!s 6+!d with extras, F1
-    b) 13-15, 3+!h, some splinter
-    2N = Asks and shows some values
-        3C = Low (!c) splinter
-        3D = 5!s 6+!d
-        3H = High (!s) splinter
-    3C = ?
-    3D = Bad hand, pass or correct to 3!h
-    3H = GF, 6+!h
-2N = 13-15, 3!h 6+!d, F1
-3C = 13-15, 55 mm, NF
+2S = a) 14-15, 4!s 5+!d
+     b) 5!s 6+!d
+2N = 13-15, 3!h 6+!d
+3C = 13-15, 55 mm
 3D = 13-15, 2\m!h 6+!d
-3H = 4!h, stronger than 2!s, some short, MAX
+3H = 14-15, 4!h, stronger than 2!h, some short
     3S = Asks
         3N, = !c splinter
         4C, = !s splinter
-3S = 4!h, some void (3N asks LH), MAX
-    3N = Asks
-        4C, = !c void
-        4D, = !s void
-3N = Offer to play with good long diamond, usually 7
-4C = 2461
-4D = 1462
-4H = 5!h 6!d
 
 1D-1S-?
-1N  11-13(14), = no singleton, BAL
-    2C = Relay to 2!d (to play, INV or ST)
-        2D = Forced
-            2H = 4144, INV+
-                2N = MIN
-                3C = 4+!c, MIN
-                3D = 4+!d, MIN
-                3H = 4+!c, MAX
-                3S = 4+!d, MAX
-                3N = No fit, MAX
-            2S = 5+!s, INV
-            2N = INV, BAL
-            3C = 5!s 5+!c, INV
-            3D = 5!s, 5+!d, INV
-            3H = 55 MM, strong INV w/good !h
-            3S = 6+!s, strong INV
-            3N = 5!s, COG (choice of games)
-            4C = 0-1!c
-            4D = 0!d
-            4H = 0!h
+1N = 11-13(14), no singleton, BAL
+    2C = Puppet to 2!d (to play or INV)
     2D = GF
-        2H = 3!s, no 5m
-        2S = 0-2!s, some 5m
-            2N = Asks
-                3C = 5!c
-                3D = 5!d
-        2N = 0-2!s, no 5m
-        3C = 3!s, 5!c
-        3D = 3!s, 5!d
-    2H = Some canape INV+
-        2S = HHx !s support
-        2N = Less than HHx !s support
-            3C = 4!s (5)6+!c, INV
-            3D = 4!s (5)6+!d, INV
-            3H = 4!s 5!c, GF
-            3S = 4!s 5!d, GF
-    2S = (5)6+!s, S/O
-    2N = Transfer to !c
-        3C = Forced
-            P = 6+!c, to play
-    3C = 5+!s 5+!c, ST
-    3D = 5+!s 5+!d, ST
-    3H = 5+!s 5+!h, ST
-    3S = 5+!s 5+!d, ST
-    3N = S/O
-    4C = RKCB in !s
-    4D = 1!d (with void 2!c)
-    4H = 1!h (with void 2!c)
-    4S = S/O
-2C = Natural, can be 1444 or 1453, not 6!d 4!c
-    2D = 3+!d, S/O
-    2H = GF
-        2S = a) 1444
-            b) = 1453
-            c) = 3!s
-            2N = Asks
-                3C = Not 3!s
-                    3D = Asks
-                        3H = 1444, Mulberry
-                        3S = 1435, Mulberry
-                        3N = 1453, Mulberry
-                    3H = Sets !h
-                3D = 3154, MIN, Mulberry
-                3H = 3154, MAX, Mulberry
-                3S = 3055, MIN, Mulberry
-                3N = 3055, MAX, Mulberry
-        2N = 13(54)
-            3C = 4!c
-                3D = 4!c
-                other = 5!c
-            3D = 4!d
-                3H = 4!d
-                other = 5!d
-        3C = 55 mm
-        3D = 22(54)
-            3H = Asks !h Qx or more
-                3N = Yes
-            3S = Asks !h Jx or more
-                3N = No
-        3H = ?
-        3S = 0454, MIN, Mulberry
-        3N = 0454, MAX, Mulberry
-    2S = 6+!s, S/O
-    2N = 9-12, INV
-    3C = 4+!c, INV
-    3D = 4+!d, INV
-    3H = 5!s 5!h, GF
-    3S = 6+!s, INV
-    3N = S/O
-    4S = 6+!s, S/O
-2D = 6+!d, MIN
-    2H = GF
-        2S = 3!s
-        2N = 1361, 2263, 2362
-        3C = 6!d 4!c
-        3D = 7!d
-    2S = 6+!s, NF
-    2N = INV
-    3D = INV
-2H = a) 4!s, not MIN, some short
-    b) 5!h 6!d, MIN
-    2S = S/O
-    2N = Asks and shows some values
-        3C = Low (!c) splinter
-        3D = Middle (!d) splinter
-        3H = High (!h) splinter
-2S = 11-12, 4!s (unless 3451), BAL or MIN
-    2N = Asks
-        3C = 4351
-        3D = 3451
-        3H = 4153
-        3S = MIN
-        3N = 4!s 6!d, MIN
-        4C = 4252
-        4D = 4441
-        4H = 4144
-        4S = BAL, MAX
-    3C = 5+!c, INV
-    3D = 5+!d, INV
-    3H = 5+!h, INV
-    3S = INV
-    3N = S/O
-    4C = Splinter, ST
-    4D = Splinter, ST
-    4H = Splinter, ST
-    4S = S/O
-2N = 13-15, 3!s 6+!d, F1
-3C = 13-15, 55 mm, NF
+2C = 8+ cards in the minors, not 6!d 4!c
+2D = 6+!d
+2H = a) 14-15, 4!h 5+!d
+     b) 5!h 6+!d
+2S = 4!s
+2N = 13-15, 3!s 6+!d
+3C = 13-15, 55 mm
 3D = 13-15, 2\m!s 6+!d
-3H = 5!h 6!d, MAX
-3S = 4!s, some short, MAX
-3N = Offer to play with good long diamond usually 7
-4C = 4!s, some void
-4D = 4!s, 1!d
-4H = 4!s, 1!h
+3S = 14-15, 4!s, stronger than 2!s, some short
+    3S = Asks, GF
+        3N, = !c splinter
+        4C, = !h splinter
+
+1D-2C-?
+2D = 5+!d, 0-3!c, UNBAL
+    3C = 11-12, INV
+    other = GF
+2H = 11-13(14), BAL
+    2S = Puppet to 2NT
+        2N = Forced
+            3C = GF
+            3H = 4!h 6!c, GF
+            3S = 4!s 6!c, GF
+            3N = S/O
+    2N = Asks 4+card minor, ST, BAL, GF
+    3C = 11-12, INV
+    3H = 5!h 6!d, GF
+    3S = 5!s 6!d, GF
+    3N = Prefers to declare, S/O
+2S = Some splinter, GF
+    2N = Asks DHS
+        3C = !d splinter
+        3D = !h splinter
+        3H = !s splinter
+2N = 4441, MIN
+3C = (41)53, GF
+    3D = Asks
+        3H = 4!h
+        3S = 4!s
+3D = Good 6+!d, GF
+3H = 5!h 6!d, GF
+3S = 5!s 6!d, GF
+3N = 4441, MAX
+
+1D-2D-?
+2H = 11-13(14), BAL
+    2S = Puppet to 2NT
+        2N = Forced
+            3C = 9+ cards in the minors, GF
+            3D = GF
+            3H = 4!h 6!c, GF
+            3S = 4!s 6!c, GF
+            3N = S/O
+    2N = Asks 4+card minor, ST, BAL, GF
+    3C = 54+ mm, could be 4!d 5!c, INV
+    3D = 11-12, INV
+    3H = 5!h 6!d, GF
+    3S = 5!s 6!d, GF
+    3N = Prefers to declare, S/O
+2S = Some splinter, GF
+2N = 6+!d, BAL, MIN
+3C =
+3D = good 6+!d, GF
+3H = 5!h 6!d, GF
+3S = 5!s 6!d, GF
+3N = 6+!d, BAL, MAX
+
+1D-2H/2S-?
+2S = S/O
+2N = GI
+    3C = 5!s 4!h, MIN
+    3D = 5!s 4!h, MAX
+    3H = 5!s 5!h, MIN
+    3S = 5!s 5!h, MAX
+3C = 55 mm
+3H = S/O
+4H = S/O
+4S = S/O
+
+1D-2N-?
+3C = 54+ mm, MIN
+3D = 6+!d, MIN
+3H = Good 4!h, short !s
+3S = Good 4!s, short !h
+3N = S/O
+4H = 5!h 6!d
 4S = 5!s 6!d
 
 ** 1!h
@@ -922,6 +717,131 @@ R = INV+
 2N = 11+, 5+!d
 3C = 0-10, 54+ mm
 3X = 6+ suit, INV
+
+Opener's second call examples:
+
+1D-(1H)-1S-(P)-?
+1N = 11-13(14), does NOT promise a stopper
+2C = a) 54+ minors
+     b) 14-15(16) 1444/1453
+2D = 6+!d
+2H = 2.5!s raise
+    a) 3!s, MAX, UNBAL
+    b) 11-13(14), 4!s, BAL
+2S = 3!s, MIN
+3S = 4!s, MAX
+
+1D-(P)-1H-(1S)-?
+P = 11-13(14), BAL, no !s stopper
+D = 3!h
+1N = 11-13(14), BAL, !s stopper
+2C = 54+ minors
+2D = 6+!d
+2H = 4!h
+
+1D-(P)-1N-(2H/2S)-?
+D = Suggests penalty, 4 good trumps
+2N = Asks a minor, typically 2344
+    P = Very flat hand
+    3C = 4+!c
+    3D = 4+!d
+2C = 54+ minors
+2D = 6+!d
+
+1D-(1H/2H/3H)-P-(P)-?
+D = Takeout
+
+Responder's first call examples:
+
+1D-(D)-?
+R = 11+, typically NT hand
+1H = 6+, 4+!h, F1
+1S = 6+, 4+!s, F1
+1N = 7-10, to play
+2C = TRF to !d
+2D = TRF to !h
+2H = TRF to !s
+2S = TRF to !c
+2N = 11+, 5+!d
+3C = 0-10, 54+ mm
+3D = 0-10, 6+!d
+3M = 6+ suit, INV
+
+1D-(1S)-?
+D = 4!h
+1N = 7-11, !s stopper
+2C = 5+!c, F1
+2D = 5+!d, F1
+2H = 5+!h, F1
+2S = GF, 3\m!h, 4\m!d, 4\m!c, no !s stopper
+2N = INV
+3C = 0-10, 54+ mm
+3D = 0-10, 6+!d
+
+1D-(2D nat)-?
+D = 4!s 4!h
+2H = 5+!h, F1
+2S = 5+!s, F1
+2N = INV, !d stopper
+3C = 5+!c, GF
+3D = Stopper ask
+
+1D-(2D Michaels)-?
+D = Good defensive hand, penalty interest against 2M
+2H = 6+!d, INV
+2S = 6+!d, GF
+2N = INV
+
+1D-(2S)-?
+D = 4!h
+2N = INV, !s stopper
+3C = 5+!c, GF
+3D = 5+!d, GF
+3H = 5+!h, GF
+3S = Stopper ask
+
+Responder's second call examples:
+
+After opener passes on the 2nd round, responder's general options:
+
+2N = Scrambling takeout, usually for opener's best minor
+D = Good hand (2+ cards in opps' suit)
+Bid = S/O
+Cue-bid = Good hand (0-1 cards in opps' suit)
+
+Example:
+
+1D-(P)-1S-(2H)-P-(P)-?
+D = 11+, 2+!h
+2S = S/O
+2N = Scramble for opener's best minor, 4144 ideally, sometimes 43(43)
+     tends to deny 11+ HCP, opener may pass only with a very good heart stop or no 4 card minor
+3C = 5+!c, S/O
+3D = 5+!d, S/O
+3H = GF, 0-1!h
+3S = Good 6+!s, INV
+
+1D-(P)-1S-(2C)-D(supp.)-(P)-?
+2D = To play/scramble
+2H = 4!h, F1
+2S = To play/scramble
+2N = 4!s, INV
+3C = General GF
+3D = 5+!d, GF
+3H = 4!h, GF
+3S = 5+!s, INV
+
+1D-(P)-1S-(2C)-2C/2D-(2S)-?
+D = 11+, good hand, no fit, 2+!s
+2N = Lebensohl, forces 3!c
+3C = Nat, INV
+3D = Nat, INV
+3H = Nat, INV
+3S = GF, short !s
+
+Rule: if opener has not distinguished minor suit(s), responder’s 2NT is
+scramble; if opener has identified one or both minors, responder’s 2NT is lebensohl.
+
 
 ** 1N
 
